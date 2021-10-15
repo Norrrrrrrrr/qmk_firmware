@@ -190,8 +190,9 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case GU_D:
     case GU_K:
-    case KC_BRCSET:
       return 200;
+    case KC_BRCSET:
+      return 300;
       break;
     default:
       return TAPPING_TERM;
