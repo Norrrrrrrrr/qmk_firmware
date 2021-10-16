@@ -9,7 +9,7 @@ BOOTLOADER = caterina
 #
 BOOTMAGIC_ENABLE = no       # Enable Bootmagic Lite
 MOUSEKEY_ENABLE = yes       # Mouse keys
-EXTRAKEY_ENABLE = yes        # Audio control and System control
+EXTRAKEY_ENABLE = yes       # Audio control and System control
 CONSOLE_ENABLE = no         # Console for debug
 COMMAND_ENABLE = no         # Commands for debug and configuration
 # Do not enable SLEEP_LED_ENABLE. it uses the same timer as BACKLIGHT_ENABLE
@@ -21,5 +21,5 @@ RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
 
 TAP_DANCE_ENABLE = yes		# Enable Tap Dance
-
+LTO_ENABLE = yes		    # Link Time Optimization
 SPLIT_KEYBOARD = yes
