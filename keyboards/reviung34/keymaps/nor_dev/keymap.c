@@ -188,12 +188,36 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
+    /* Aoid to mistake mod */
     case GU_D:
     case GU_K:
       return 200;
+    /* Easier for Tap Dance */
+    case TT_F1F6:
+    case TT_F2F7:
+    case TT_F3F8:
+    case TT_F4F9:
+    case TT_F5F10:
+
+    case TT_EX_11:
+    case TT_AT_12:
+    case TT_HS_ES:
+    case TT_DL_GR:
+    case TT_PR_TL:
+
+    case TT_CR_AP:
+    case TT_AM_L2:
+    case TT_AS_R2:
+    case TT_LB13:
+    case TT_RB13:
+
+    case TT_MI_UN:
+    case TT_EQ_PL:
+    case TT_QU_DQ:
+    case TT_BL_PI:
+      return 200;
     case KC_BRCSET:
       return 300;
-      break;
     default:
       return TAPPING_TERM;
   }
