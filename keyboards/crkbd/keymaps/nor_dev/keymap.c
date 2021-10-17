@@ -121,11 +121,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       KC_GRV,   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,    KC_9,    KC_0,  KC_UNDS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     _______, TT_EX_11,TT_AT_12,TT_HS_ES,TT_DL_GR,TT_PR_TL,                  TT_CR_AP,TT_AM_L2,TT_AS_R2,TT_LB13, TT_RB13, KC_BSLS,
+     _______, TT_EX_11,TT_AT_12,TT_HS_ES,TT_DL_GR,TT_PR_TL,                     TT_CR_AP,TT_AM_L2,TT_AS_R2,TT_LB13, TT_RB13, KC_BSLS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, TT_F1F6, TT_F2F7, TT_F3F8, TT_F4F9, TT_F5F10,                  TT_MI_UN,TT_EQ_PL,TT_QU_DQ,_______, TT_BL_PI,KC_PLUS,
+     _______, TT_F1F6, TT_F2F7, TT_F3F8, TT_F4F9, TT_F5F10,                     TT_MI_UN,TT_EQ_PL,TT_QU_DQ,_______, TT_BL_PI,KC_PLUS,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                         XXXXXXX, LOW_SPC, _______,   KC_BRCSET, KC_ENT,  XXXXXXX
+                                         XXXXXXX, LOW_SPC, _______,   KC_BRCSET, KC_ENT, XXXXXXX
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -133,7 +133,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
      KC_GESC, CG_LEFT, CG_RGHT, SG_LEFT, SG_RGHT, XXXXXXX,                      XXXXXXX, KC_HOME, KC_PGDN, KC_PGUP,  KC_END, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     _______, KC_LSFT, KC_LCTL, KC_LGUI, KC_LALT, KC_LANG2,                    KC_LANG1, KC_LEFT, KC_DOWN,  KC_UP,  KC_RGHT, XXXXXXX,
+     _______, KC_LSFT, KC_LCTL, KC_LGUI, KC_LALT, KC_LANG2,                     KC_LANG1,KC_LEFT, KC_DOWN,  KC_UP,  KC_RGHT, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, KC_BSPC,S(KC_TAB), KC_TAB,  KC_DEL, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
