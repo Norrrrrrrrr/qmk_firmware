@@ -226,16 +226,13 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 }
 
 void dance_brackets_set(qk_tap_dance_state_t *state, void *user_data) {
-  if (state->count == 1)
-  {
+  if (state->count == 1) {
     SEND_STRING("()"SS_TAP(X_LEFT));
   }
-  else if (state->count == 2)
-  {
+  else if (state->count == 2) {
     SEND_STRING("[]"SS_TAP(X_LEFT));
   }
-  else if (state->count >= 3)
-  {
+  else if (state->count >= 3) {
     SEND_STRING("{}"SS_TAP(X_LEFT));
     reset_tap_dance(state);
   }
