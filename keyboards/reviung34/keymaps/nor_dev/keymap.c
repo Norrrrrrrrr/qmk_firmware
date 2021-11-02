@@ -175,7 +175,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //   return update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);
 // }
 
-//s nn_rev02
 bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LOW_SPC:
@@ -189,41 +188,24 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-    /* Aoid to mistake mod */
-    case GU_D:
-    case GU_K:
-      return 200;
+    /* Typing mod and layer quickly */
+    case SF_A:
+    case CT_S:
+    case AL_F:
+    case AL_J:
+    case CT_L:
+    case SF_SC:
+        return 160;
+    case LOW_SPC:
+    case RAI_ENT:
+        return 130;
     /* Easier for Tap Dance */
-    case TT_F1F6:
-    case TT_F2F7:
-    case TT_F3F8:
-    case TT_F4F9:
-    case TT_F5F10:
-
-    case TT_EX_11:
-    case TT_AT_12:
-    case TT_HS_ES:
-    case TT_DL_GR:
-    case TT_PR_TL:
-
-    case TT_CR_AP:
-    case TT_AM_L2:
-    case TT_AS_R2:
-    case TT_LB13:
-    case TT_RB13:
-
-    case TT_MI_UN:
-    case TT_EQ_PL:
-    case TT_QU_DQ:
-    case TT_BL_PI:
-      return 200;
     case KC_BRCSET:
       return 300;
     default:
-      return TAPPING_TERM;
+      return 200;
   }
 }
-//e nn_rev02
 
 void dance_brackets_set(qk_tap_dance_state_t *state, void *user_data) {
   if (state->count == 1) {
