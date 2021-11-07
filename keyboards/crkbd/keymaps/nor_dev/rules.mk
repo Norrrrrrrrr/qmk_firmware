@@ -16,4 +16,4 @@ TAP_DANCE_ENABLE = yes		# Enable Tap Dance
 IOS_DEVICE_ENABLE = no      # connect to IOS device (iPad,iPhone)
 #Link_Time_Optimization = no # if firmware size over limit, try this option
 #EXTRAFLAGS += -flto		# Link Time Optimization
-LTO_ENABLE = yes
+LTO_ENABLE = no
