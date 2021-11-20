@@ -157,19 +157,19 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-    /* Typing mod and layer quickly */
-    case SF_A:
-    case CT_S:
-    case AL_F:
-    case AL_J:
-    case CT_L:
-    case SF_SC:
-        return 160;
+    /* Avoid mis-type */
+    case GU_D:
+    case GU_K:
+        return 200;
+    case ADJ_BS:
+        return 500;
+    /* Typing layer quickly */
     case LOW_SPC:
     case RAI_ENT:
+    case FKY_SFT:
         return 130;
     default:
-      return 200;
+      return 160;
   }
 }
 
