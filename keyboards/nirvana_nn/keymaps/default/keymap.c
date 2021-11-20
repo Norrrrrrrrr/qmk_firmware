@@ -78,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { \
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
 | Tab  |   !  |   @  |   #  |   $  |   %  |  |   ^  |   &  |   *  |   (  |   )  |   \  |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
-| Shift|      |      |      |      |      |  |      |   [  |   ]  |   {  |   }  |   +  |
+| Shift|      |      |      |      |      |  |   [  |   ]  |   {  |   .  |   }  |   +  |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
 |      |      |      |      |LowSpc|      |  |  BS  | Enter|      |      |      |      |
 `-----------------------------------------'  `-----------------------------------------'
@@ -86,7 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { \
   [_LOWER] = LAYOUT( \
       KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                      KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_UNDS, \
       _______, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                   KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSLS, \
-      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, KC_LBRC, KC_RBRC, KC_LCBR, KC_RCBR, KC_PLUS, \
+      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   KC_LBRC, KC_RBRC, KC_LCBR, KC_DOT,  KC_RCBR, KC_PLUS, \
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LOW_SPC, XXXXXXX,                   KC_BSPC, KC_ENT,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX \
       ),
 
@@ -94,17 +94,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { \
 ,-----------------------------------------.  ,-----------------------------------------.
 |   `  |   F1 |   F2 |   F3 |   F4 |   F5 |  |   F6 |   F7 |   F8 |   F9 |  F10 |   _  |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
-| Tab  |  F11 |  F12 |  ESC |   `  |   ~  |  |  App |   _  |   +  |   "  |   |  |   \  |
+| Tab  |  F11 |  F12 |  ESC |   `  |   ~  |  |   _  |   +  |   "  |  App |   |  |   \  |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
-| Shift|      |      |      |      |      |  |      |   -  |   =  |   '  |   \  |   +  |
+| Shift|      |      |      |      |      |  |   -  |   =  |   '  |      |   \  |   +  |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
 |      |      |      |      | Space|FkySft|  |  BS  | Enter|      |      |      |      |
 `-----------------------------------------'  `-----------------------------------------'
    */
   [_F_KEY] = LAYOUT( \
       KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                     KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_UNDS, \
-      _______, KC_F11,  KC_F12,  KC_ESC,  KC_GRV,  KC_TILD,                   KC_APP,  KC_UNDS, KC_PLUS, KC_DQT,  KC_PIPE, KC_BSLS, \
-      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, KC_MINS, KC_EQL,  KC_QUOT, KC_BSLS, KC_PLUS, \
+      _______, KC_F11,  KC_F12,  KC_ESC,  KC_GRV,  KC_TILD,                   KC_UNDS, KC_PLUS, KC_DQT,  KC_APP,  KC_PIPE, KC_BSLS, \
+      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   KC_MINS, KC_EQL,  KC_QUOT, XXXXXXX, KC_BSLS, KC_PLUS, \
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_SPC,  FKY_SFT,                   KC_BSPC, KC_ENT,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX \
       ),
 
