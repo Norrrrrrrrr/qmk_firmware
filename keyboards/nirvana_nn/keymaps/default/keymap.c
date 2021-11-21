@@ -21,7 +21,7 @@
 enum layer_names {
     _QWERTY = 0,
     _LOWER,
-    _F_KEY,
+    _LOWER2,
     _RAISE,
     _ADJUST
 };
@@ -49,8 +49,8 @@ enum custom_keycodes {
 
 #define LOW_SPC LT(_LOWER, KC_SPC)
 #define RAI_ENT LT(_RAISE, KC_ENT)
-#define FKY_SFT LT(_F_KEY, KC_LSFT)
-#define ADJ_BS LT(_ADJUST, KC_BSPC)
+#define LO2_SFT LT(_LOWER2, KC_LSFT)
+#define KC_ADJ MO(_ADJUST)
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { \
@@ -62,14 +62,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { \
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
 | Shift|   Z  |   X  |   C  |   V  |   B  |  |   N  |   M  |   ,  |   .  |   /  |   =  |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
-|      |      |      |      |LowSpc|FkySft|  | AdjBS|RaiEnt|      |      |      |      |
+|      |      |      |      |LowSpc|Lo2Sft|  |  BS  |RaiEnt|      |      |      |      |
 `-----------------------------------------'  `-----------------------------------------'
    */
   [_QWERTY] = LAYOUT(
       KC_GESC, KC_Q,    KC_W,    KC_E,    KC_R,     KC_T,                     KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_MINS, \
       KC_TAB,  SF_A,    CT_S,    GU_D,    AL_F,     KC_G,                     KC_H,    AL_J,    GU_K,    CT_L,    SF_SC,   KC_QUOT, \
       KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,     KC_B,                     KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_EQL, \
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LOW_SPC,  FKY_SFT,                  ADJ_BS,  RAI_ENT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX \
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LOW_SPC,  LO2_SFT,                  KC_BSPC, RAI_ENT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX \
       ),
 
   /* Lower
@@ -80,17 +80,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { \
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
 | Shift|      |      |      |      |      |  |   [  |   ]  |   {  |   .  |   }  |   +  |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
-|      |      |      |      |LowSpc|      |  |  BS  | Enter|      |      |      |      |
+|      |      |      |      |LowSpc|Adjust|  |  BS  | Enter|      |      |      |      |
 `-----------------------------------------'  `-----------------------------------------'
    */
   [_LOWER] = LAYOUT( \
       KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                      KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_UNDS, \
       _______, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                   KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSLS, \
       _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   KC_LBRC, KC_RBRC, KC_LCBR, KC_DOT,  KC_RCBR, KC_PLUS, \
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LOW_SPC, XXXXXXX,                   KC_BSPC, KC_ENT,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX \
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LOW_SPC, KC_ADJ,                    _______, KC_ENT,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX \
       ),
 
-  /* F_Key
+  /* Lower2
 ,-----------------------------------------.  ,-----------------------------------------.
 |   `  |   F1 |   F2 |   F3 |   F4 |   F5 |  |   F6 |   F7 |   F8 |   F9 |  F10 |   _  |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
@@ -98,14 +98,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { \
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
 | Shift|      |      |      |      |      |  |   -  |   =  |   '  |      |   \  |   +  |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
-|      |      |      |      | Space|FkySft|  |  BS  | Enter|      |      |      |      |
+|      |      |      |      |Adjust|Lo2Sft|  |  BS  | Enter|      |      |      |      |
 `-----------------------------------------'  `-----------------------------------------'
    */
-  [_F_KEY] = LAYOUT( \
+  [_LOWER2] = LAYOUT( \
       KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                     KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_UNDS, \
       _______, KC_F11,  KC_F12,  KC_ESC,  KC_GRV,  KC_TILD,                   KC_UNDS, KC_PLUS, KC_DQT,  KC_APP,  KC_PIPE, KC_BSLS, \
       _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   KC_MINS, KC_EQL,  KC_QUOT, XXXXXXX, KC_BSLS, KC_PLUS, \
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_SPC,  FKY_SFT,                   KC_BSPC, KC_ENT,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX \
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ADJ,  LO2_SFT,                   _______, KC_ENT,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX \
       ),
 
   /* Raise
@@ -123,7 +123,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { \
       KC_GESC, CG_LEFT, CG_RGHT, SG_LEFT, SG_RGHT, XXXXXXX,                   XXXXXXX, KC_HOME, KC_PGDN, KC_PGUP, KC_END,  XXXXXXX, \
       _______, KC_LSFT, KC_LCTL, KC_LGUI, KC_LALT, KC_LANG2,                  KC_LANG1,KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX, \
       _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, KC_BSPC,S(KC_TAB),KC_TAB,  KC_DEL,  XXXXXXX, \
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_SPC,  XXXXXXX,                   KC_BSPC, RAI_ENT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX \
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_SPC,  XXXXXXX,                   _______, RAI_ENT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX \
       ),
 
   /* Adjust
@@ -134,14 +134,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { \
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
 |      |      |      |      |      |      |  |      |      |      |      |      |      |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
-|      |      |      |      | Space|      |  | AdjBS| Enter|      |      |      |      |
+|      |      |      |      |LowSpc|Lo2Sft|  |  BS  | Enter|      |      |      |      |
 `-----------------------------------------'  `-----------------------------------------'
    */
     [_ADJUST] =  LAYOUT( \
       XXXXXXX, RESET,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, KC_PSCR, KC_INS,  XXXXXXX, \
       XXXXXXX, XXXXXXX, KC_BTN2, KC_BTN3, KC_BTN1, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, KC_SLCK, KC_PAUS, XXXXXXX,\
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,\
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_SPC,  XXXXXXX,                   ADJ_BS,  KC_ENT,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX\
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______,                   _______, KC_ENT,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX\
       )
 };
 
@@ -161,12 +161,10 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     case GU_D:
     case GU_K:
         return 200;
-    case ADJ_BS:
-        return 500;
     /* Typing layer quickly */
     case LOW_SPC:
     case RAI_ENT:
-    case FKY_SFT:
+    case LO2_SFT:
         return 130;
     default:
       return 160;
