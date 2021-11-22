@@ -149,6 +149,7 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LOW_SPC:
         case RAI_ENT:
+        case LO2_SFT:
             return true;
         default:
             return false;
