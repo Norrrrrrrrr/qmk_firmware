@@ -168,7 +168,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     case LO2_SFT:
         return 130;
     default:
-      return 160;
+      return 150;
   }
 }
 
