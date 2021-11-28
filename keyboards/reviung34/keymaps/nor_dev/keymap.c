@@ -86,7 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* LOWER2
 ,----------------------------------.  ,----------------------------------.
 |   1  |   2  |   3  |   4  |   5  |  |   6  |   7  |   8  |   9  |   0  |
-+------+------+------+------+------|  |------+------+------+------+------|
+|------+------+------+------+------|  |------+------+------+------+------|
 |  F1  |  F2  |  F3  |  F4  |  F5  |  |  F6  |  F7  |  F8  |  F9  |  F10 |
 |------+------+------+------+------|  |------+------+------+------+------|
 |  F11 |  F12 |      |      |      |  |      |      |   ,  |   .  |      |
@@ -158,8 +158,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         return 200;
     /* Typing layer quickly */
     case LOW_SPC:
-    case RAI_ENT:
     case LO2_SFT:
+    case RAI_ENT:
         return 130;
     default:
       return 150;
