@@ -31,6 +31,16 @@
 #define TAPPING_FORCE_HOLD_PER_KEY
 //e nn_rev02
 
+// 押しっぱなしの時の反応までのインターバル
+#undef  MOUSEKEY_INTERVAL
+#define MOUSEKEY_INTERVAL 16
+// カーソルの移動スピード
+#undef  MOUSEKEY_MAX_SPEED
+#define MOUSEKEY_MAX_SPEED 2
+// マウス操作がトップスピードになるまでの時間
+#undef  MOUSEKEY_TIME_TO_MAX
+#define MOUSEKEY_TIME_TO_MAX 30
+
 #define RGB_DI_PIN D3
 #ifdef RGB_DI_PIN
   #define RGBLED_NUM 9
