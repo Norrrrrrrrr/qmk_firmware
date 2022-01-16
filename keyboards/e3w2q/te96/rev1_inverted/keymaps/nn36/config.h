@@ -41,3 +41,32 @@
 #undef  MOUSEKEY_TIME_TO_MAX
 #define MOUSEKEY_TIME_TO_MAX 30
 
+
+/* This a shortcut to help you visually see your layout.
+ *
+ * The first section contains all of the arguments representing the physical
+ * layout of the board and position of the keys.
+ *
+ * The second converts the arguments into a two-dimensional array which
+ * represents the switch matrix.
+ */
+#define LAYOUT_nn36( \
+    l54, l53, l52, l51, l50,           r00, r01, r02, r03, r04, \
+    l44, l43, l42, l41, l40,           r10, r11, r12, r13, r14, \
+    l34, l33, l32, l31, l30,           r20, r21, r22, r23, r24, \
+                   l21, l20, l25, r35, r30, r31 \
+  ) \
+  { \
+    { KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO }, \
+    { KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO }, \
+    { l20,   l21,   KC_NO, KC_NO, KC_NO, l25,   KC_NO, KC_NO }, \
+    { l30,   l31,   l32,   l33,   l34,   KC_NO, KC_NO, KC_NO }, \
+    { l40,   l41,   l42,   l43,   l44,   KC_NO, KC_NO, KC_NO }, \
+    { l50,   l51,   l52,   l53,   l54,   KC_NO, KC_NO, KC_NO }, \
+    { r00,   r01,   r02,   r03,   r04,   KC_NO, KC_NO, KC_NO }, \
+    { r10,   r11,   r12,   r13,   r14,   KC_NO, KC_NO, KC_NO }, \
+    { r20,   r21,   r22,   r23,   r24,   KC_NO, KC_NO, KC_NO }, \
+    { r30,   r31,   KC_NO, KC_NO, KC_NO, r35, KC_NO, KC_NO }, \
+    { KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO }, \
+    { KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO } \
+  }
