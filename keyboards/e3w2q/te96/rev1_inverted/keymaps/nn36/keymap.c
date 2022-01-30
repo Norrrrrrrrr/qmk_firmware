@@ -69,17 +69,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ,----------------------------------.                ,----------------------------------.
 |   !  |   @  |   #  |   $  |   %  |                |   ^  |   &  |   *  |   (  |   )  |
 |------+------+------+------+------|                |------+------+------+------+------|
-|  ESC |   ~  |   {  |   }  |      |                |      |   _  |   +  |   "  |   |  |
+|  ESC |   ~  |   {  |   }  | CLK_L|                |      |   _  |   +  |   "  |   |  |
 |------+------+------+------+------|                |------+------+------+------+------|
-|      |   `  |   [  |   ]  |      |                |      |   -  |   =  |   '  |   \  |
+|      |   `  |   [  |   ]  | CLK_R|                |      |   -  |   =  |   '  |   \  |
 `------+------+------+------+------+------.  ,------+------+------+------+------+------'
                      |      |LowSpc|Adjust|  |  BS  | Enter|      |
                      `--------------------'  `--------------------'
    */
   [_LOWER] = LAYOUT_nn36(
     KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,       KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,
-    KC_ESC,  KC_TILD, KC_LCBR, KC_RCBR, XXXXXXX,       XXXXXXX, KC_UNDS, KC_PLUS, KC_DQT,  KC_PIPE,
-    XXXXXXX, KC_GRV,  KC_LBRC, KC_RBRC, XXXXXXX,       XXXXXXX, KC_MINS, KC_EQL,  KC_QUOT, KC_BSLS,
+    KC_ESC,  KC_TILD, KC_LCBR, KC_RCBR, KC_BTN1,       XXXXXXX, KC_UNDS, KC_PLUS, KC_DQT,  KC_PIPE,
+    XXXXXXX, KC_GRV,  KC_LBRC, KC_RBRC, KC_BTN2,       XXXXXXX, KC_MINS, KC_EQL,  KC_QUOT, KC_BSLS,
                       XXXXXXX, LOW_SPC, KC_ADJ,        _______, KC_ENT , XXXXXXX
   ),
 
