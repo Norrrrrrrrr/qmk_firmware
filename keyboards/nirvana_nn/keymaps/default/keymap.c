@@ -26,6 +26,16 @@ enum layer_names {
     _ADJUST
 };
 
+// Tap Dance declarations
+enum {
+    TD_F1_F6,
+    TD_F2_F7,
+    TD_F3_F8,
+    TD_F4_F9,
+    TD_F5F10,
+    TD_F1112,
+};
+
 // Defines the keycodes used by our macros in process_record_user
 enum custom_keycodes {
   KC_NOT_USED = SAFE_RANGE,
@@ -46,6 +56,13 @@ enum custom_keycodes {
 #define CG_RGHT C(G(KC_RGHT))
 #define SG_LEFT S(G(KC_LEFT))
 #define SG_RGHT S(G(KC_RGHT))
+
+#define TT_F1F6 TD(TD_F1_F6)
+#define TT_F2F7 TD(TD_F2_F7)
+#define TT_F3F8 TD(TD_F3_F8)
+#define TT_F4F9 TD(TD_F4_F9)
+#define TT_F5F10 TD(TD_F5F10)
+#define TT_F1112 TD(TD_F1112)
 
 #define LOW_SPC LT(_LOWER, KC_SPC)
 #define RAI_ENT LT(_RAISE, KC_ENT)
@@ -76,17 +93,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ,-----------------------------------------.  ,-----------------------------------------.
 |   `  |   !  |   @  |   #  |   $  |   %  |  |   ^  |   &  |   *  |   (  |   )  |   _  |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
-| Tab  |  ESC |   ~  |   {  |   }  | CLK_L|  |      |   _  |   +  |   "  |   |  |   \  |
+| Tab  |  ESC |   ~  |   {  |   }  |ImeOff|  |ImeOn |   _  |   +  |   "  |   |  |   \  |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
-| Shift|      |   `  |   [  |   ]  | CLK_R|  |      |   -  |   =  |   '  |   \  |   +  |
+| Shift|      |   `  |   [  |   ]  |      |  |      |   -  |   =  |   '  |   \  |   +  |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
 |      |      |      |      |LowSpc|Adjust|  |  BS  | Enter|      |      |      |      |
 `-----------------------------------------'  `-----------------------------------------'
    */
   [_LOWER] = LAYOUT(
       KC_GRV,  KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,       KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_UNDS,
-      _______, KC_ESC,  KC_TILD, KC_LCBR, KC_RCBR, KC_BTN1,       XXXXXXX, KC_UNDS, KC_PLUS, KC_DQT,  KC_PIPE, KC_BSLS,
-      _______, XXXXXXX, KC_GRV,  KC_LBRC, KC_RBRC, KC_BTN2,       XXXXXXX, KC_MINS, KC_EQL,  KC_QUOT, KC_BSLS, KC_PLUS,
+      _______, KC_ESC,  KC_TILD, KC_LCBR, KC_RCBR, KC_LANG2,      KC_LANG1,KC_UNDS, KC_PLUS, KC_DQT,  KC_PIPE, KC_BSLS,
+      _______, XXXXXXX, KC_GRV,  KC_LBRC, KC_RBRC, XXXXXXX,       XXXXXXX, KC_MINS, KC_EQL,  KC_QUOT, KC_BSLS, KC_PLUS,
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LOW_SPC, KC_ADJ,        _______, KC_ENT,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
       ),
 
@@ -94,17 +111,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ,-----------------------------------------.  ,-----------------------------------------.
 |   `  |   1  |   2  |   3  |   4  |   5  |  |   6  |   7  |   8  |   9  |   0  |   _  |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
-| Tab  |  F1  |  F2  |  F3  |  F4  |  F5  |  |  F6  |  F7  |  F8  |  F9  |  F10 |   \  |
+| Tab  | Wh_L | Wh_D | Wh_U | Wh_R |F11F12|  | F1 F6| F2 F7| F3 F8| F4 F9|F5 F10|   \  |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
-| Shift|  F11 |  F12 |      |   +  |   -  |  |   *  |   /  |   ,  |   .  |   =  |   +  |
+| Shift| CLK_R| CLK_M| CLK_L|   +  |   -  |  |   *  |   /  |   ,  |   .  |   =  |   +  |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
 |      |      |      |      |Adjust|Lo2Sft|  |  BS  | Enter|      |      |      |      |
 `-----------------------------------------'  `-----------------------------------------'
    */
   [_LOWER2] = LAYOUT(
       KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,          KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_UNDS,
-      _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,         KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_BSLS,
-      _______, KC_F11,  KC_F12,  XXXXXXX, KC_PLUS, KC_MINS,       KC_ASTR, KC_SLSH, KC_COMM, KC_DOT,  KC_EQL,  KC_PLUS,
+      _______, KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, TT_F1112,      TT_F1F6, TT_F2F7, TT_F3F8, TT_F4F9, TT_F5F10,KC_BSLS,
+      _______, KC_BTN2, KC_BTN3, KC_BTN1, KC_PLUS, KC_MINS,       KC_ASTR, KC_SLSH, KC_COMM, KC_DOT,  KC_EQL,  KC_PLUS,
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ADJ,  LO2_SFT,       _______, KC_ENT,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
       ),
 
@@ -114,7 +131,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
 | Tab  | Shift| Ctrl |  Gui |  Alt |ImeOff|  |ImeON | Left | Down | Up   | Right|      |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
-| Shift| Wh_L | Wh_D | Wh_U | Wh_R |      |  |  App |  BS  |SftTab| Tab  | Del  |      |
+| Shift|      |      |      |      |      |  |  App |  BS  |SftTab| Tab  | Del  |      |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
 |      |      |      |      | Space|      |  |  BS  |RaiEnt|      |      |      |      |
 `-----------------------------------------'  `-----------------------------------------'
@@ -122,7 +139,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_RAISE] = LAYOUT(
       KC_GESC, CG_LEFT, CG_RGHT, SG_LEFT, SG_RGHT, XXXXXXX,       XXXXXXX, KC_HOME, KC_PGDN, KC_PGUP, KC_END,  XXXXXXX,
       _______, KC_LSFT, KC_LCTL, KC_LGUI, KC_LALT, KC_LANG2,      KC_LANG1,KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX,
-      _______, KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, XXXXXXX,       KC_APP,  KC_BSPC,S(KC_TAB),KC_TAB,  KC_DEL,  XXXXXXX,
+      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       KC_APP,  KC_BSPC,S(KC_TAB),KC_TAB,  KC_DEL,  XXXXXXX,
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_SPC,  XXXXXXX,       _______, RAI_ENT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
       ),
 
@@ -167,8 +184,24 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     case LO2_SFT:
     case RAI_ENT:
         return 130;
+    /* Easier for Tap Dance */
+    case TT_F1F6:
+    case TT_F2F7:
+    case TT_F3F8:
+    case TT_F4F9:
+    case TT_F5F10:
+    case TT_F1112:
+      return 200;
     default:
       return 150;
   }
 }
 
+qk_tap_dance_action_t tap_dance_actions[] = {
+    [TD_F1_F6] = ACTION_TAP_DANCE_DOUBLE(KC_F1, KC_F6),
+    [TD_F2_F7] = ACTION_TAP_DANCE_DOUBLE(KC_F2, KC_F7),
+    [TD_F3_F8] = ACTION_TAP_DANCE_DOUBLE(KC_F3, KC_F8),
+    [TD_F4_F9] = ACTION_TAP_DANCE_DOUBLE(KC_F4, KC_F9),
+    [TD_F5F10] = ACTION_TAP_DANCE_DOUBLE(KC_F5, KC_F10),
+    [TD_F1112] = ACTION_TAP_DANCE_DOUBLE(KC_F11, KC_F12),
+};
