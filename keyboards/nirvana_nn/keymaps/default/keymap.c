@@ -109,19 +109,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /* Lower2
 ,-----------------------------------------.  ,-----------------------------------------.
-|   `  | Wh_L | Wh_D | Wh_U | Wh_R |F11F12|  | F1 F6| F2 F7| F3 F8| F4 F9|F5 F10|   _  |
+|   `  |   1  |   2  |   3  |   4  |   5  |  |   6  |   7  |   8  |   9  |   0  |   _  |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
-| Tab  |   1  |   2  |   3  |   4  |   5  |  |   6  |   7  |   8  |   9  |   0  |   \  |
+| Tab  |   +  |   -  |   *  |   /  |   =  |  | F1 F6| F2 F7| F3 F8| F4 F9|F5 F10|   \  |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
-| Shift| CLK_R| CLK_M| CLK_L|   +  |   -  |  |   *  |   /  |   ,  |   .  |   =  |   +  |
+| Shift| CLK_R| CLK_M| CLK_L| Wh_D | Wh_U |  |F11F12|      |   ,  |   .  |      |   +  |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
 |      |      |      |      |Adjust|Lo2Sft|  |  BS  | Enter|      |      |      |      |
 `-----------------------------------------'  `-----------------------------------------'
    */
   [_LOWER2] = LAYOUT(
-      KC_GRV,  KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, TT_F1112,      TT_F1F6, TT_F2F7, TT_F3F8, TT_F4F9, TT_F5F10,KC_UNDS,
-      _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,          KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSLS,
-      _______, KC_BTN2, KC_BTN3, KC_BTN1, KC_PLUS, KC_MINS,       KC_ASTR, KC_SLSH, KC_COMM, KC_DOT,  KC_EQL,  KC_PLUS,
+      KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,          KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_UNDS,
+      _______, KC_PLUS, KC_MINS, KC_ASTR, KC_SLSH, KC_EQL ,       TT_F1F6, TT_F2F7, TT_F3F8, TT_F4F9, TT_F5F10,KC_BSLS,
+      _______, KC_BTN2, KC_BTN3, KC_BTN1, KC_WH_D, KC_WH_U,      TT_F1112, XXXXXXX, KC_COMM, KC_DOT,  XXXXXXX, KC_PLUS,
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ADJ,  LO2_SFT,       _______, KC_ENT,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
       ),
 
