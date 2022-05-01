@@ -1,6 +1,6 @@
 ﻿# The reviung34 Layout
 # nor_dev
-# command: cd qmk_firmware, make reviung:reviung34:nor_dev(:flash)
+# command: cd qmk_firmware, make reviung/reviung34:nor_dev(:flash)
 
 ### Base
 ```
