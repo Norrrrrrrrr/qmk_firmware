@@ -173,7 +173,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     /* Avoid mis-type */
     case GU_D:
     case GU_K:
-        return 200;
+        return 400;
     /* Typing layer quickly */
     case LOW_SPC:
     case LO2_SFT:
