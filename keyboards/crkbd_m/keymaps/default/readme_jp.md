@@ -1,4 +1,4 @@
-﻿# The Default Nirvana Layout
+﻿# The Default Crkbd_m Layout
 # default
 # command: cd qmk_firmware, make ncrkbd_m:default(:flash)
 ## 配列
