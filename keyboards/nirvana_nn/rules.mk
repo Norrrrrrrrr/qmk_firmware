@@ -15,7 +15,7 @@ COMMAND_ENABLE = no         # Commands for debug and configuration
 # Do not enable SLEEP_LED_ENABLE. it uses the same timer as BACKLIGHT_ENABLE
 SLEEP_LED_ENABLE = no       # Breathing sleep LED during USB suspend
 # if this doesn't work, see here: https://github.com/tmk/tmk_keyboard/wiki/FAQ#nkro-doesnt-work
-NKRO_ENABLE = no            # USB Nkey Rollover
+NKRO_ENABLE = yes           # USB Nkey Rollover
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
@@ -23,3 +23,5 @@ AUDIO_ENABLE = no           # Audio output
 TAP_DANCE_ENABLE = yes		# Enable Tap Dance
 # LTO_ENABLE = yes		    # Link Time Optimization
 SPLIT_KEYBOARD = yes
+
+DEBOUNCE_TYPE = sym_eager_pk	# Enable different debounce algorithm
