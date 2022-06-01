@@ -22,6 +22,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define CONFIG_USER_H
 #pragma once
 
+// #define DEBUG_MATRIX_SCAN_RATE  //Output Scan rate [scans/sec]
+                                // '22/06/01: 1500[scans/sec] at Normal debounce
+                                // '22/06/01: 1410[scans/sec] at eager_pk debounce
+
 // place overrides here
 // #define ONESHOT_TAP_TOGGLE 2  /* Tapping this number of times holds the key until tapped once again. */
 // #define ONESHOT_TIMEOUT 2000  /* Time (in ms) before the one shot key is released */
