@@ -89,7 +89,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 // #define DEBOUNCE 5
-#define DEBOUNCE 50 //For sym_eager_pk algorithm
+#define DEBOUNCE 30 //For sym_eager_pk algorithm
 
 /* define if matrix has ghost (lacks anti-ghosting diodes) */
 //#define MATRIX_HAS_GHOST
