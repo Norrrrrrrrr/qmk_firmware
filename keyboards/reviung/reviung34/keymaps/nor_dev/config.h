@@ -16,6 +16,10 @@
 
 #pragma once
 
+// #define DEBUG_MATRIX_SCAN_RATE  //Output Scan rate [scans/sec]
+                                // '22/06/01: 2427[scans/sec] at Normal debounce
+                                // '22/06/01: 1941[scans/sec] at eager_pk debounce
+
 // place overrides here
 
 //s nn_rev01
