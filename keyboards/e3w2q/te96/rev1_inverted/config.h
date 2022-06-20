@@ -25,7 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    e3w2q
 #define PRODUCT         te96
-#define DESCRIPTION     Expandable keyboard PCB with a smaller pitch
+// #define DESCRIPTION     Expandable keyboard PCB with a smaller pitch
 
 /* key matrix size */
 #define MATRIX_ROWS 6*2 //master: 6 rows, slave: 6 rows
