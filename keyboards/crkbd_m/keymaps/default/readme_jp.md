@@ -1,6 +1,6 @@
 ﻿# The Default Crkbd_m Layout
 # default
-# command: cd qmk_firmware, make ncrkbd_m:default(:flash)
+# command: cd qmk_firmware, make crkbd_m:default(:flash)
 ## 配列
 
 ### Base
