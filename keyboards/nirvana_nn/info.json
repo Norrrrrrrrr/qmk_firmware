@@ -1,7 +1,13 @@
 {
     "keyboard_name": "nirvana_nn",
+    "manufacturer": "Norrrrrrrrr",
     "url": "",
     "maintainer": "Norrrrrrrrr",
+    "usb": {
+        "vid": "0x1209",
+        "pid": "0xBD06",
+        "device_version": "0.0.1"
+    },
     "layouts": {
         "LAYOUT": {
             "layout": [
