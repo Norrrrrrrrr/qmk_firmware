@@ -1,7 +1,13 @@
 {
     "keyboard_name": "crkbd_m",
+    "manufacturer": "Norrrrrrrrr",
     "url": "",
     "maintainer": "Norrrrrrrrr",
+    "usb": {
+        "vid": "0x4653",
+        "pid": "0x0001",
+        "device_version": "0.0.1"
+    },
     "layouts": {
         "LAYOUT_split_3x5_sqmtrx": {
             "layout": [
