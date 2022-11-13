@@ -57,16 +57,16 @@
                    l21, l20, l25, r35, r30, r31 \
   ) \
   { \
-    { KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO }, \
-    { KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO }, \
-    { l20,   l21,   KC_NO, KC_NO, KC_NO, l25,   KC_NO, KC_NO }, \
-    { l30,   l31,   l32,   l33,   l34,   KC_NO, KC_NO, KC_NO }, \
-    { l40,   l41,   l42,   l43,   l44,   KC_NO, KC_NO, KC_NO }, \
-    { l50,   l51,   l52,   l53,   l54,   KC_NO, KC_NO, KC_NO }, \
-    { r00,   r01,   r02,   r03,   r04,   KC_NO, KC_NO, KC_NO }, \
-    { r10,   r11,   r12,   r13,   r14,   KC_NO, KC_NO, KC_NO }, \
-    { r20,   r21,   r22,   r23,   r24,   KC_NO, KC_NO, KC_NO }, \
-    { r30,   r31,   KC_NO, KC_NO, KC_NO, r35,   KC_NO, KC_NO }, \
-    { KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO }, \
-    { KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO } \
+    { KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO }, \
+    { KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO }, \
+    { l20,   l21,   KC_NO, KC_NO, KC_NO, l25   }, \
+    { l30,   l31,   l32,   l33,   l34,   KC_NO }, \
+    { l40,   l41,   l42,   l43,   l44,   KC_NO }, \
+    { l50,   l51,   l52,   l53,   l54,   KC_NO }, \
+    { r00,   r01,   r02,   r03,   r04,   KC_NO }, \
+    { r10,   r11,   r12,   r13,   r14,   KC_NO }, \
+    { r20,   r21,   r22,   r23,   r24,   KC_NO }, \
+    { r30,   r31,   KC_NO, KC_NO, KC_NO, r35   }, \
+    { KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO }, \
+    { KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO } \
   }
