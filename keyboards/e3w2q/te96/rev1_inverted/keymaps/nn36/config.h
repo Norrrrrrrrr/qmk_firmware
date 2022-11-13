@@ -66,7 +66,7 @@
     { r00,   r01,   r02,   r03,   r04,   KC_NO, KC_NO, KC_NO }, \
     { r10,   r11,   r12,   r13,   r14,   KC_NO, KC_NO, KC_NO }, \
     { r20,   r21,   r22,   r23,   r24,   KC_NO, KC_NO, KC_NO }, \
-    { r30,   r31,   KC_NO, KC_NO, KC_NO, r35, KC_NO, KC_NO }, \
+    { r30,   r31,   KC_NO, KC_NO, KC_NO, r35,   KC_NO, KC_NO }, \
     { KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO }, \
     { KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO } \
   }
