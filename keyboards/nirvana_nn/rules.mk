@@ -21,7 +21,11 @@ RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
 
 TAP_DANCE_ENABLE = yes		# Enable Tap Dance
-# LTO_ENABLE = yes		    # Link Time Optimization
 SPLIT_KEYBOARD = yes
 
 DEBOUNCE_TYPE = sym_eager_pk	# Enable different debounce algorithm
+
+# Reduce code size
+# LTO_ENABLE = yes		    # Link Time Optimization
+SPACE_CADET_ENABLE = no
+MAGIC_ENABLE = no
