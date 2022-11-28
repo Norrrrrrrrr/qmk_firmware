@@ -19,14 +19,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "config_common.h"
 
-/* USB Device descriptor parameter */
-#define VENDOR_ID       0x1209
-#define PRODUCT_ID      0x4651
-#define DEVICE_VER      0x0001
-#define MANUFACTURER    e3w2q
-#define PRODUCT         te96
-// #define DESCRIPTION     Expandable keyboard PCB with a smaller pitch
-
 /* key matrix size */
 #define MATRIX_ROWS 4*2 //master: 4 rows, slave: 4 rows
 #define MATRIX_COLS 6
