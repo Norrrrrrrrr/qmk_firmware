@@ -2,6 +2,11 @@
     "keyboard_name": "te96",
     "url": "https://github.com/e3w2q/te96-keyboard",
     "maintainer": "e3w2q",
+    "usb": {
+        "vid": "0x1209",
+        "pid": "0x4651",
+        "device_version": "0.0.1"
+    },
     "width": 17,
     "height": 6,
     "layouts": {
