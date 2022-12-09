@@ -36,12 +36,6 @@ enum {
     TD_F1112,
 };
 
-// Defines the keycodes used by our macros in process_record_user
-enum custom_keycodes {
-  KC_NOT_USED = SAFE_RANGE,
-};
-
-//Macros
 #define SF_A SFT_T(KC_A)
 #define CT_S CTL_T(KC_S)
 #define GU_D GUI_T(KC_D)
