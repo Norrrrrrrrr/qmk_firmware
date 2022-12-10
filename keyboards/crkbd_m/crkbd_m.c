@@ -21,11 +21,11 @@ const matrix_row_t matrix_mask[MATRIX_ROWS] = {
   0b0000000000010111,
   0b0000000000011011,
   0b0000000000011101,
-  0b0000000000011110,
+  0b0000000000000110,   // Not Connected, Handedness Diode, Key, Key, Column Diode
 
   0b0000000000001111,
   0b0000000000010111,
   0b0000000000011011,
   0b0000000000011101,
-  0b0000000000011110,
+  0b0000000000000110,   // Not Connected, Not Connected, Key, Key, Column Diode
 };
