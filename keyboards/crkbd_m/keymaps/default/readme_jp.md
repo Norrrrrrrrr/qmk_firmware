@@ -2,6 +2,7 @@
 # default
 # command: cd qmk_firmware, make crkbd_m:default(:flash)
 
+# command with EEP for handedness: make crkbd_m:default:avrdude-split-left( or avrdude-split-right )
 # command all 4 keyboards: make crkbd_m:default && make e3w2q/te96/rev1_inverted:nn36 && make nirvana_nn:default && make reviung/reviung34:nor_dev
 ## 配列
 
