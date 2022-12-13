@@ -1,6 +1,7 @@
 ﻿# The nn36(based on te96) Layout
 # nn36
 # command: cd qmk_firmware, make e3w2q/te96/rev1_inverted:nn36(:flash)
+# command with EEP for handedness: make e3w2q/te96/rev1_inverted:nn36:avrdude-split-left( or avrdude-split-right )
 
 ### Base
 ```
