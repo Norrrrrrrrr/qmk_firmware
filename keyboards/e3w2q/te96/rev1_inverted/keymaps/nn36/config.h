@@ -18,6 +18,9 @@
 
 // place overrides here
 
+/* Select hand configuration */
+#define EE_HANDS
+
 //s nn_rev01
 #undef TAPPING_TERM
 #define TAPPING_TERM 160
