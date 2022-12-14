@@ -30,3 +30,4 @@ DEBOUNCE_TYPE = sym_eager_pk	# Enable different debounce algorithm
 LTO_ENABLE = yes		    # Link Time Optimization
 SPACE_CADET_ENABLE = no
 MAGIC_ENABLE = no
+GRAVE_ESC_ENABLE = no
