@@ -23,10 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define USE_MATRIX_I2C
 
 /* Select hand configuration */
-
-#define MASTER_LEFT
-// #define MASTER_RIGHT
-// #define EE_HANDS
+#define EE_HANDS
 
 #define USE_SERIAL_PD2
 
@@ -49,14 +46,29 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #undef  MOUSEKEY_TIME_TO_MAX
 #define MOUSEKEY_TIME_TO_MAX 30
 
-#ifdef RGBLIGHT_ENABLE
-    #undef RGBLED_NUM
-    #define RGBLIGHT_ANIMATIONS
-    #define RGBLED_NUM 27
-    #define RGBLIGHT_LIMIT_VAL 120
-    #define RGBLIGHT_HUE_STEP 10
-    #define RGBLIGHT_SAT_STEP 17
-    #define RGBLIGHT_VAL_STEP 17
+/* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
+#undef  DEBOUNCE
+#define DEBOUNCE 30 //For sym_eager_pk algorithm
+
+/* disable action features */
+#define LAYER_STATE_8BIT
+#define NO_ACTION_ONESHOT
+
+
+
+// If you need more program area, try select and reduce rgblight modes to use.
+
+// Selection of RGBLIGHT MODE to use.
+#if defined(LED_ANIMATIONS)
+   #define RGBLIGHT_EFFECT_BREATHING
+   #define RGBLIGHT_EFFECT_RAINBOW_MOOD
+   #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
+   #define RGBLIGHT_EFFECT_SNAKE
+   #define RGBLIGHT_EFFECT_KNIGHT
+   #define RGBLIGHT_EFFECT_CHRISTMAS
+   #define RGBLIGHT_EFFECT_STATIC_GRADIENT
+   //#define RGBLIGHT_EFFECT_RGB_TEST
+   //#define RGBLIGHT_EFFECT_ALTERNATING
 #endif
 
 #define OLED_FONT_H "keyboards/crkbd/lib/glcdfont.c"
