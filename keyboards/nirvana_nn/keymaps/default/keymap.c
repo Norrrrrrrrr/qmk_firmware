@@ -121,7 +121,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /* Raise
 ,-----------------------------------------.  ,-----------------------------------------.
-| Esc `|CtWn<-|CtWn->|SfWn<-|SfWn->|      |  |      | Home |PageDn|PageUp| End  |      |
+| Esc  |CtWn<-|CtWn->|SfWn<-|SfWn->|      |  |      | Home |PageDn|PageUp| End  |      |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
 | Tab  | Shift| Ctrl |  Gui |  Alt |      |  |      | Left | Down | Up   | Right|      |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
