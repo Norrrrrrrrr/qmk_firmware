@@ -1,3 +1,0 @@
-cd qmk_firmware
-make crkbd:nor_dev
-qmk compile -kb crkbd -km nor_dev
