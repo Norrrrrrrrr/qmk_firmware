@@ -8,6 +8,7 @@
         "pid": "0x4651",
         "device_version": "0.0.1"
     },
+    "debounce": 40,
     "width": 17,
     "height": 6,
     "layouts": {
