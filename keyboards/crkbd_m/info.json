@@ -8,6 +8,7 @@
         "pid": "0x0001",
         "device_version": "0.0.1"
     },
+    "debounce": 40,
     "layouts": {
         "LAYOUT_split_3x5_sqmtrx": {
             "layout": [
