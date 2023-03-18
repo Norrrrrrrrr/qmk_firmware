@@ -8,6 +8,7 @@
         "pid": "0xBD06",
         "device_version": "0.0.1"
     },
+    "debounce": 40,
     "layouts": {
         "LAYOUT": {
             "layout": [
