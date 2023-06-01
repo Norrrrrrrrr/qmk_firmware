@@ -26,7 +26,6 @@
 #define TAPPING_TERM 160
 #define TAPPING_TERM_PER_KEY
 #define PERMISSIVE_HOLD
-#define IGNORE_MOD_TAP_INTERRUPT
 //e nn_rev01
 //s nn_rev02
 // #undef TAPPING_FORCE_HOLD
