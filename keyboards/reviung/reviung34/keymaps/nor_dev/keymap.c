@@ -156,15 +156,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 };
 
-bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
+uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LOW_SPC:
         case LO2_SFT:
         case RAI_ENT:
-            return true;
+            return 0;
             break;
         default:
-            return false;
+            return QUICK_TAP_TERM;
     }
 }
 
