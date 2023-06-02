@@ -28,10 +28,10 @@
  */
 
 #define LAYOUT_split_3x5_sqmtrx( \
-  L14, L03, L02, L01, L00,           R04, R03, R02, R01, R10, \
-  L24, L23, L12, L11, L10,           R14, R13, R12, R21, R20, \
-  L34, L33, L32, L21, L20,           R24, R23, R32, R31, R30, \
-                 L42, L41, L30, R34, R43, R42 \
+  L14, L03, L02, L01, L00,           R50, R51, R52, R53, R64, \
+  L24, L23, L12, L11, L10,           R60, R61, R62, R73, R74, \
+  L34, L33, L32, L21, L20,           R70, R71, R82, R83, R84, \
+                 L42, L41, L30, R80, R91, R92 \
   ) \
   { \
     { L00,  L01,  L02,  L03,  KC_NO }, \
@@ -39,13 +39,9 @@
     { L20,  L21,  KC_NO,L23,  L24 }, \
     { L30,  KC_NO,L32,  L33,  L34 }, \
     { KC_NO,L41,  L42,  KC_NO,KC_NO }, \
-    { R04,  R03,  R02,  R01,  KC_NO }, \
-    { R14,  R13,  R12,  KC_NO,R10 }, \
-    { R24,  R23,  KC_NO,R21,  R20 }, \
-    { R34,  KC_NO,R32,  R31,  R30 }, \
-    { KC_NO,R43,  R42,  KC_NO,KC_NO } \
+    { R50,  R51,  R52,  R53,  KC_NO }, \
+    { R60,  R61,  R62,  KC_NO,R64 }, \
+    { R70,  R71,  KC_NO,R73,  R74 }, \
+    { R80,  KC_NO,R82,  R83,  R84 }, \
+    { KC_NO,R91,  R92,  KC_NO,KC_NO } \
   }
-
-
-#define LAYOUT LAYOUT_split_3x5_sqmtrx
-// #define LAYOUT LAYOUT_split_3x5_3
