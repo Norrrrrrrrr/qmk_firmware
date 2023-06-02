@@ -34,9 +34,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define TAPPING_TERM 160
 #define TAPPING_TERM_PER_KEY
 #define PERMISSIVE_HOLD
-// #undef TAPPING_FORCE_HOLD
-#define TAPPING_FORCE_HOLD
-#define TAPPING_FORCE_HOLD_PER_KEY
+#define QUICK_TAP_TERM_PER_KEY
 
 // 押しっぱなしの時の反応までのインターバル
 #undef  MOUSEKEY_INTERVAL
