@@ -20,6 +20,10 @@
         "debounce_type": "sym_eager_pk",
         "lto": true
     },
+    "matrix_pins": {
+        "cols": [ "B1", "F7", "F6", "F5", "F4" ],
+        "rows": [ "F4", "F5", "F6", "F7", "B1" ]
+    },
     "diode_direction": "COL2ROW",
     "split": {
         "enabled": true,
