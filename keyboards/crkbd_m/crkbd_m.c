@@ -14,7 +14,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "crkbd_m.h"
+#include "quantum.h"
+
 
 const matrix_row_t matrix_mask[MATRIX_ROWS] = {
   0b0000000000001111,
