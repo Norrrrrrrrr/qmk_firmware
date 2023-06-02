@@ -13,8 +13,6 @@ AUDIO_ENABLE = no           # Audio output
 
 TAP_DANCE_ENABLE = yes		# Enable Tap Dance
 
-DEBOUNCE_TYPE = sym_eager_pk	# Enable different debounce algorithm
-
 # Reduce code size
 SPACE_CADET_ENABLE = no
 MAGIC_ENABLE = no
