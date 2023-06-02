@@ -8,6 +8,23 @@
         "pid": "0x0001",
         "device_version": "0.0.1"
     },
+    "features": {
+        "bootmagic": false,
+        "extrakey": false,
+        "lto": true,
+        "mousekey": true,
+        "nkro": false,
+        "oled": false
+    },
+    "build": {
+        "lto": true
+    },
+    "diode_direction": "COL2ROW",
+    "split": {
+        "enabled": true
+    },
+    "processor": "atmega32u4",
+    "bootloader": "caterina",
     "debounce": 40,
     "layouts": {
         "LAYOUT_split_3x5_sqmtrx": {
