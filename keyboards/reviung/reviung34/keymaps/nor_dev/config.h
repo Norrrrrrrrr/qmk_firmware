@@ -28,11 +28,7 @@
 #define TAPPING_TERM_PER_KEY
 #define PERMISSIVE_HOLD
 //e nn_rev01
-//s nn_rev02
-// #undef TAPPING_FORCE_HOLD
-#define TAPPING_FORCE_HOLD
-#define TAPPING_FORCE_HOLD_PER_KEY
-//e nn_rev02
+#define QUICK_TAP_TERM_PER_KEY
 
 // 押しっぱなしの時の反応までのインターバル
 #undef  MOUSEKEY_INTERVAL
