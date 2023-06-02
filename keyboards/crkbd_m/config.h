@@ -17,23 +17,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-/* key matrix size */
-#define MATRIX_ROWS (5 * 2)
-#define MATRIX_COLS 5
 #define MATRIX_MASKED
 
-/*
- * Keyboard Matrix Assignments
- *
- * Change this to how you wired your keyboard
- * COLS: AVR pins used for columns, left to right
- * ROWS: AVR pins used for rows, top to bottom
- * DIODE_DIRECTION: COL2ROW = COL = Anode (+), ROW = Cathode (-, marked on diode)
- *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
- *
- */
-#define MATRIX_ROW_PINS { F4, F5, F6, F7, B1 }
-#define MATRIX_COL_PINS { B1, F7, F6, F5, F4 }
 
 /* Detect Handedness by EEP */
 #define EE_HANDS
