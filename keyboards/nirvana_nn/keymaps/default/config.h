@@ -36,6 +36,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PERMISSIVE_HOLD
 #define QUICK_TAP_TERM_PER_KEY
 
+
 // 押しっぱなしの時の反応までのインターバル
 #undef  MOUSEKEY_INTERVAL
 #define MOUSEKEY_INTERVAL 16
