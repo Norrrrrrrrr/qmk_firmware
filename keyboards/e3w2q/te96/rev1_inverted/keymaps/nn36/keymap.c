@@ -199,4 +199,3 @@ tap_dance_action_t tap_dance_actions[] = {
     [TD_F5F10] = ACTION_TAP_DANCE_DOUBLE(KC_F5, KC_F10),
     [TD_F1112] = ACTION_TAP_DANCE_DOUBLE(KC_F11, KC_F12),
 };
-
