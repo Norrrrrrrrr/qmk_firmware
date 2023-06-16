@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define BACKLIGHT_LEVELS 3
 
 //https://github.com/qmk/qmk_firmware/blob/master/docs/feature_rgblight.md
-#define WS2812_DI_PIN D3
+// #define WS2812_DI_PIN D3
 #ifdef WS2812_DI_PIN
   #define RGBLIGHT_SPLIT
   #define RGBLED_NUM 12
