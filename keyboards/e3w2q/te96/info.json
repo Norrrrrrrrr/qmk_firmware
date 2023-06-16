@@ -11,10 +11,19 @@
     "features": {
         "bootmagic": false,
         "extrakey": false,
-        "lto": true,
-        "mousekey": true,
         "nkro": false,
         "oled": false
+    },
+    "mouse_key": {
+        "enabled": true,
+        "interval": 16,
+        "max_speed": 2,
+        "time_to_max": 30
+    },
+    "tapping": {
+        "permissive_hold": true,
+        "term": 160,
+        "term_per_key": true
     },
     "build": {
         "debounce_type": "sym_eager_pk",
