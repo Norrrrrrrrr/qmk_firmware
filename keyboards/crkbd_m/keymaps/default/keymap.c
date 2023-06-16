@@ -95,7 +95,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    */
   [_LOWER] = LAYOUT_split_3x5_sqmtrx(
     KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,       KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,
-    KC_ESC,  KC_TILD, KC_LCBR, KC_RCBR, KC_LNG2,       KC_LNG1,KC_UNDS, KC_PLUS, KC_DQT,  KC_PIPE,
+    KC_ESC,  KC_TILD, KC_LCBR, KC_RCBR, KC_LNG2,       KC_LNG1, KC_UNDS, KC_PLUS, KC_DQT,  KC_PIPE,
     XXXXXXX, KC_GRV,  KC_LBRC, KC_RBRC, XXXXXXX,       XXXXXXX, KC_MINS, KC_EQL,  KC_QUOT, KC_BSLS,
                       XXXXXXX, LOW_SPC, KC_ADJ,        _______, KC_ENT , XXXXXXX
   ),
@@ -104,7 +104,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ,----------------------------------.                ,----------------------------------.
 |   1  |   2  |   3  |   4  |   5  |                |   6  |   7  |   8  |   9  |   0  |
 |------+------+------+------+------|                |------+------+------+------+------|
-| CLK_R| CLK_M| CLK_L| Wh_D | Wh_U |                |      |   +  |   -  |   *  |   /  |
+| CLK_M| CLK_R| CLK_L| Wh_D | Wh_U |                |      |   +  |   -  |   *  |   /  |
 |------+------+------+------+------|                |------+------+------+------+------|
 | F1 F6| F2 F7| F3 F8| F4 F9|F5 F10|                |F11F12|      |   ,  |   .  |   =  |
 `------+------+------+------+------+------.  ,------+------+------+------+------+------'
