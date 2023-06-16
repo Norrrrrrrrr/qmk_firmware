@@ -18,8 +18,6 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-// #ifndef CONFIG_USER_H
-// #define CONFIG_USER_H
 #pragma once
 
 // #define DEBUG_MATRIX_SCAN_RATE  //Output Scan rate [scans/sec]
@@ -47,4 +45,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
    //#define RGBLIGHT_EFFECT_ALTERNATING
 #endif
 
-// #endif /* CONFIG_USER_H */
