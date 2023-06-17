@@ -17,9 +17,8 @@
 #include "keycode.h"
 #include "quantum_keycodes.h"
 
-// Defines names for use in layer keycodes and the keymap
 enum layer_names {
-    _QWERTY = 0,
+    _BASE = 0,
     _LOWER,
     _LOWER2,
     _RAISE,
@@ -76,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 |      |      |      |      |LowSpc|Lo2Sft|  |  BS  |RaiEnt|      |      |      |      |
 `-----------------------------------------'  `-----------------------------------------'
    */
-  [_QWERTY] = LAYOUT(
+  [_BASE] = LAYOUT(
       KC_ESC,  KC_Q,    KC_W,    KC_E,    KC_R,     KC_T,         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_MINS,
       KC_TAB,  SF_A,    CT_S,    GU_D,    AL_F,     KC_G,         KC_H,    AL_J,    GU_K,    CT_L,    SF_SC,   KC_QUOT,
       KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,     KC_B,         KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_EQL,
