@@ -18,32 +18,13 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-// #ifndef CONFIG_USER_H
-// #define CONFIG_USER_H
 #pragma once
 
 // place overrides here
 /* Select hand configuration */
 #define EE_HANDS
 
-#undef TAPPING_TERM
-// #define TAPPING_TERM 200
-#define TAPPING_TERM 160
-#define TAPPING_TERM_PER_KEY
-#define PERMISSIVE_HOLD
 #define QUICK_TAP_TERM_PER_KEY
-
-
-// 押しっぱなしの時の反応までのインターバル
-#undef  MOUSEKEY_INTERVAL
-#define MOUSEKEY_INTERVAL 16
-// カーソルの移動スピード
-#undef  MOUSEKEY_MAX_SPEED
-#define MOUSEKEY_MAX_SPEED 2
-// マウス操作がトップスピードになるまでの時間
-#undef  MOUSEKEY_TIME_TO_MAX
-#define MOUSEKEY_TIME_TO_MAX 30
-
 
 // If you need more program area, try select and reduce rgblight modes to use.
 
