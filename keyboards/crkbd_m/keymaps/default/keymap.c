@@ -62,6 +62,20 @@ enum {
 #define LO2_SFT LT(_LOWER2, KC_LSFT)
 #define KC_ADJ MO(_ADJUST)
 
+/* Combo */
+const uint16_t PROGMEM fg_combo[] = {AL_F, KC_G, COMBO_END};
+const uint16_t PROGMEM hj_combo[] = {KC_H, AL_J, COMBO_END};
+const uint16_t PROGMEM nm_combo[] = {KC_N, KC_M, COMBO_END};
+const uint16_t PROGMEM xc_combo[] = {KC_X, KC_C, COMBO_END};
+const uint16_t PROGMEM cv_combo[] = {KC_C, KC_V, COMBO_END};
+
+combo_t key_combos[] = {
+  COMBO(fg_combo, KC_LNG2),
+  COMBO(hj_combo, KC_LNG1),
+  COMBO(nm_combo, KC_APP),
+  COMBO(xc_combo, KC_BTN2),
+  COMBO(cv_combo, KC_BTN1),
+};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* BASE
@@ -74,6 +88,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 `------+------+------+------+------+------.  ,------+------+------+------+------+------'
                      |      |LowSpc|Lo2Sft|  |  BS  |RaiEnt|      |
                      `--------------------'  `--------------------'
+    Combo: F&G = ImeOff, H&J = ImeOn, N&M = App, X&C = CLK_R, C&V = CLK_L
    */
   [_BASE] = LAYOUT_split_3x5_sqmtrx(
     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,          KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
