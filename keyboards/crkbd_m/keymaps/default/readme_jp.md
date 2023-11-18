@@ -17,7 +17,7 @@
 `------+------+------+------+------+------.  ,------+------+------+------+------+------'
                      |      |LowSpc|Lo2Sft|  |  BS  |RaiEnt|      |
                      `--------------------'  `--------------------'
-    Combo: F&G = ImeOff, H&J = ImeOn, N&M = App, X&C = CLK_R, C&V = CLK_L
+    Combo: F&G = ImeOff, H&J = ImeOn, N&M = App, M&"," = "-", X&C = CLK_R, C&V = CLK_L
 ```
 
 ### Lower
