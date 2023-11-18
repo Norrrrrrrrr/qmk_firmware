@@ -62,6 +62,22 @@ enum {
 #define LO2_SFT LT(_LOWER2, KC_LSFT)
 #define KC_ADJ MO(_ADJUST)
 
+/* Combo */
+const uint16_t PROGMEM fg_combo[] = {AL_F, KC_G, COMBO_END};
+const uint16_t PROGMEM hj_combo[] = {KC_H, AL_J, COMBO_END};
+const uint16_t PROGMEM nm_combo[] = {KC_N, KC_M, COMBO_END};
+const uint16_t PROGMEM mcom_combo[] = {KC_M, KC_COMM, COMBO_END};
+const uint16_t PROGMEM xc_combo[] = {KC_X, KC_C, COMBO_END};
+const uint16_t PROGMEM cv_combo[] = {KC_C, KC_V, COMBO_END};
+
+combo_t key_combos[] = {
+  COMBO(fg_combo, KC_LNG2),
+  COMBO(hj_combo, KC_LNG1),
+  COMBO(nm_combo, KC_APP),
+  COMBO(mcom_combo, KC_MINS),
+  COMBO(xc_combo, KC_BTN2),
+  COMBO(cv_combo, KC_BTN1),
+};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* BASE
@@ -69,11 +85,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 |   Q  |   W  |   E  |   R  |   T  |                |   Y  |   U  |   I  |   O  |   P  |
 |------+------+------+------+------|                |------+------+------+------+------|
 | A Sft| S Ctl| D Win| F Alt|   G  |                |   H  | J Alt| K Win| L Ctl| ; Sft|
+|      |      |      |   ^ImeOff^  |                |   ^ImeOn^   |      |      |      |
 |------+------+------+------+------|                |------+------+------+------+------|
 |   Z  |   X  |   C  |   V  |   B  |                |   N  |   M  |   ,  |   .  |   /  |
+|      |   ^CLK_R^^CLK_L^   |      |                |    ^App^  ^ - ^    |      |      |
 `------+------+------+------+------+------.  ,------+------+------+------+------+------'
                      |      |LowSpc|Lo2Sft|  |  BS  |RaiEnt|      |
                      `--------------------'  `--------------------'
+Combo: F&G = ImeOff, H&J = ImeOn, N&M = App, M&"," = "-", X&C = CLK_R, C&V = CLK_L
    */
   [_BASE] = LAYOUT_nn36(
     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,          KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
