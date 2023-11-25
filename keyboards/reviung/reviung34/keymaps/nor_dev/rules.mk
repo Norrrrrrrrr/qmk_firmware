@@ -1,4 +1,3 @@
-RGBLIGHT_ENABLE = yes
 
 #s nn_rev01
 BOOTMAGIC_ENABLE = no       # Enable Bootmagic Lite
@@ -11,16 +10,18 @@ COMMAND_ENABLE = no        # Commands for debug and configuration
 # SLEEP_LED_ENABLE = no       # Breathing sleep LED during USB suspend
 NKRO_ENABLE = no            # Enable N-Key Rollover
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
+RGBLIGHT_ENABLE = yes
 AUDIO_ENABLE = no           # Audio output
 
 # LTO_ENABLE = yes
 TAP_DANCE_ENABLE = yes		# Enable Tap Dance
 #e nn_rev01
+COMBO_ENABLE = yes			# Enable Combo
 
 DEBOUNCE_TYPE = sym_eager_pk	# Enable different debounce algorithm
 
 # Reduce code size
-# LTO_ENABLE = yes		    # Link Time Optimization
+LTO_ENABLE = yes		    # Link Time Optimization
 SPACE_CADET_ENABLE = no
 MAGIC_ENABLE = no
 GRAVE_ESC_ENABLE = no
