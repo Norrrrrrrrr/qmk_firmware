@@ -62,6 +62,22 @@ enum {
 #define LO2_SFT LT(_LOWER2, KC_LSFT)
 #define KC_ADJ MO(_ADJUST)
 
+/* Combo */
+const uint16_t PROGMEM fg_combo[] = {AL_F, KC_G, COMBO_END};
+const uint16_t PROGMEM hj_combo[] = {KC_H, AL_J, COMBO_END};
+const uint16_t PROGMEM nm_combo[] = {KC_N, KC_M, COMBO_END};
+const uint16_t PROGMEM mcom_combo[] = {KC_M, KC_COMM, COMBO_END};
+const uint16_t PROGMEM xc_combo[] = {KC_X, KC_C, COMBO_END};
+const uint16_t PROGMEM cv_combo[] = {KC_C, KC_V, COMBO_END};
+
+combo_t key_combos[] = {
+  COMBO(fg_combo, KC_LNG2),
+  COMBO(hj_combo, KC_LNG1),
+  COMBO(nm_combo, KC_APP),
+  COMBO(mcom_combo, KC_MINS),
+  COMBO(xc_combo, KC_BTN2),
+  COMBO(cv_combo, KC_BTN1),
+};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* Qwerty
@@ -69,8 +85,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 | Esc  |   Q  |   W  |   E  |   R  |   T  |  |   Y  |   U  |   I  |   O  |   P  |   -  |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
 | Tab  | A Sft| S Ctl| D Win| F Alt|   G  |  |   H  | J Alt| K Win| L Ctl| ; Sft|   '  |
+|      |      |      |      |   ^ImeOff^  |  |   ^ImeOn^   |      |      |      |      |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
 | Shift|   Z  |   X  |   C  |   V  |   B  |  |   N  |   M  |   ,  |   .  |   /  |   =  |
+|      |      |   ^CLK_R^^CLK_L^   |      |  |    ^App^  ^ - ^    |      |      |      |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
 |      |      |      |      |LowSpc|Lo2Sft|  |  BS  |RaiEnt|      |      |      |      |
 `-----------------------------------------'  `-----------------------------------------'
