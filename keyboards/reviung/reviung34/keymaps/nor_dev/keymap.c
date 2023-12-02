@@ -94,7 +94,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                      |LowSpc|Lo2Sft|  |  BS  |RaiEnt|
                      `-------------'  `-------------'
    */
-  [_BASE] = LAYOUT_reviung34(
+  [_BASE] = LAYOUT_rev34(
     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,          KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
     SF_A,    CT_S,    GU_D,    AL_F,    KC_G,          KC_H,    AL_J,    GU_K,    CT_L,    SF_SC,
     KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,          KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,
@@ -112,7 +112,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                      |LowSpc|Adjust|  |  BS  | Enter|
                      `-------------'  `-------------'
    */
-  [_LOWER] = LAYOUT_reviung34(
+  [_LOWER] = LAYOUT_rev34(
     KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,       KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,
     KC_ESC,  KC_TILD, KC_LCBR, KC_RCBR, KC_LNG2,       KC_LNG1, KC_UNDS, KC_PLUS, KC_DQT,  KC_PIPE,
     XXXXXXX, KC_GRV,  KC_LBRC, KC_RBRC, XXXXXXX,       XXXXXXX, KC_MINS, KC_EQL,  KC_QUOT, KC_BSLS,
@@ -130,7 +130,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                      |Adjust|Lo2Sft|  |  BS  | Enter|
                      `-------------'  `-------------'
    */
-  [_LOWER2] = LAYOUT_reviung34(
+  [_LOWER2] = LAYOUT_rev34(
     KC_1,    KC_2,    KC_3,    KC_4,    KC_5,          KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
     KC_BTN3, KC_BTN2, KC_BTN1, KC_WH_D, KC_WH_U,       XXXXXXX, KC_PLUS, KC_MINS, KC_ASTR, KC_SLSH,
     TT_F1F6, TT_F2F7, TT_F3F8, TT_F4F9, TT_F5F10,     TT_F1112, XXXXXXX, KC_COMM, KC_DOT,  KC_EQL ,
@@ -148,7 +148,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                      | Space|      |  |  BS  |RaiEnt|
                      `-------------'  `-------------'
    */
-  [_RAISE] = LAYOUT_reviung34(
+  [_RAISE] = LAYOUT_rev34(
     CG_LEFT, CG_RGHT, SG_LEFT, SG_RGHT, XXXXXXX,       XXXXXXX, KC_HOME, KC_PGDN, KC_PGUP, KC_END,
     KC_LSFT, KC_LCTL, KC_LGUI, KC_LALT, XXXXXXX,       XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       KC_APP,  KC_BSPC,S(KC_TAB),KC_TAB,  KC_DEL,
@@ -166,7 +166,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                      |LowSpc|Lo2Sft|  |  BS  | Enter|
                      `-------------'  `-------------'
    */
-  [_ADJUST] = LAYOUT_reviung34(
+  [_ADJUST] = LAYOUT_rev34(
     QK_BOOT, RGB_VAI, RGB_SAI, RGB_HUI, RGB_MOD,       XXXXXXX, XXXXXXX, XXXXXXX, KC_PSCR, KC_INS,
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, KC_SCRL, KC_PAUS,
     RGB_TOG, RGB_VAD, RGB_SAD, RGB_HUD, RGB_RMOD,      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
