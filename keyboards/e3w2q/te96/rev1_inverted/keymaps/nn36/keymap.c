@@ -67,6 +67,8 @@ const uint16_t PROGMEM nm_combo[] = {KC_N, KC_M, COMBO_END};
 const uint16_t PROGMEM mcom_combo[] = {KC_M, KC_COMM, COMBO_END};
 const uint16_t PROGMEM xc_combo[] = {KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM cv_combo[] = {KC_C, KC_V, COMBO_END};
+const uint16_t PROGMEM zx_combo[] = {KC_Z, KC_X, COMBO_END};
+const uint16_t PROGMEM vb_combo[] = {KC_V, KC_B, COMBO_END};
 
 combo_t key_combos[] = {
   COMBO(fg_combo, KC_LNG2),
@@ -75,6 +77,8 @@ combo_t key_combos[] = {
   COMBO(mcom_combo, KC_MINS),
   COMBO(xc_combo, KC_BTN2),
   COMBO(cv_combo, KC_BTN1),
+  COMBO(zx_combo, KC_WH_U),
+  COMBO(vb_combo, KC_WH_D),
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -86,7 +90,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 |      |      |      |   ^ImeOff^  |                |   ^ImeOn^   |      |      |      |
 |------+------+------+------+------|                |------+------+------+------+------|
 |   Z  |   X  |   C  |   V  |   B  |                |   N  |   M  |   ,  |   .  |   /  |
-|      |   ^CLK_R^^CLK_L^   |      |                |    ^App^  ^ - ^    |      |      |
+|    ^WH_U^^CLK_R^^CLK_L^ ^WH_D^   |                |    ^App^  ^ - ^    |      |      |
 `------+------+------+------+------+------.  ,------+------+------+------+------+------'
                      |      |LowSpc|Lo2Sft|  |  BS  |RaiEnt|      |
                      `--------------------'  `--------------------'
