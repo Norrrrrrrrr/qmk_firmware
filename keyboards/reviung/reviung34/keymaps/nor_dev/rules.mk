@@ -1,14 +1,7 @@
 
 #s nn_rev01
-BOOTMAGIC_ENABLE = no       # Enable Bootmagic Lite
-MOUSEKEY_ENABLE = yes       # Mouse keys
-EXTRAKEY_ENABLE = no        # Audio control and System control
-CONSOLE_ENABLE = no         # Console for debug
-# CONSOLE_ENABLE = yes         # Output DEBUG_MATRIX_SCAN_RATE
-COMMAND_ENABLE = no        # Commands for debug and configuration
 # Do not enable SLEEP_LED_ENABLE. it uses the same timer as BACKLIGHT_ENABLE
 # SLEEP_LED_ENABLE = no       # Breathing sleep LED during USB suspend
-NKRO_ENABLE = no            # Enable N-Key Rollover
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = yes
 AUDIO_ENABLE = no           # Audio output
