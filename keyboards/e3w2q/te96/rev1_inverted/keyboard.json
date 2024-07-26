@@ -10,9 +10,10 @@
     },
     "features": {
         "bootmagic": false,
+        "command": false,
+        "console": false,
         "extrakey": false,
-        "nkro": false,
-        "oled": false
+        "nkro": false
     },
     "mouse_key": {
         "enabled": true,
