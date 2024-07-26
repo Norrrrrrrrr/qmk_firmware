@@ -13,7 +13,6 @@
         "command": false,
         "console": false,
         "extrakey": false,
-        "mousekey": true,
         "nkro": false,
         "oled": false
     },
