@@ -2,7 +2,6 @@
 #   change yes to no to disable
 #
 
-TAP_DANCE_ENABLE = yes		# Enable Tap Dance
 COMBO_ENABLE = yes			# Enable Combo
 
 # Reduce code size
