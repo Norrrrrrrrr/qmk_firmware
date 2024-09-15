@@ -127,7 +127,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
 | Tab  | Shift| Ctrl |  Gui |  Alt |      |  |      | Left | Down | Up   | Right|      |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
-| Shift|      |      |      |      |      |  |  App |  BS  |SftTab| Tab  | Del  |      |
+| Shift|      |      |      |      |      |  |      |  BS  |SftTab| Tab  | Del  |      |
 |------+------+------+------+------+------|  |------+------+------+------+------+------|
 |      |      |      |      | Space|      |  |  BS  |RaiEnt|      |      |      |      |
 `-----------------------------------------'  `-----------------------------------------'
@@ -135,7 +135,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_RAISE] = LAYOUT(
       KC_ESC,  CG_LEFT, CG_RGHT, SG_LEFT, SG_RGHT, XXXXXXX,       XXXXXXX, KC_HOME, KC_PGDN, KC_PGUP, KC_END,  XXXXXXX,
       _______, KC_LSFT, KC_LCTL, KC_LGUI, KC_LALT, XXXXXXX,       XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX,
-      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       KC_APP,  KC_BSPC,S(KC_TAB),KC_TAB,  KC_DEL,  XXXXXXX,
+      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, KC_BSPC,S(KC_TAB),KC_TAB,  KC_DEL,  XXXXXXX,
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_SPC,  XXXXXXX,       _______, RAI_ENT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
       ),
 
