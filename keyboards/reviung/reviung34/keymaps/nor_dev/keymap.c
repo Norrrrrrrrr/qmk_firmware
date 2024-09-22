@@ -76,14 +76,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 |   Z  |   X  |   C  |   V  |   B  |  |   N  |   M  |   ,  |   .  |   /  |
 |    ^WH_U^^CLK_R^^CLK_L^ ^WH_D^   |  |    ^App^  ^ - ^    |      |      |
 `------+------+------+------+------|  |------+------+------+------+------'
-                     |LowSpc|Lo2Sft|  |  BS  |RaiEnt|
+                     |LowSpc|  BS  |  |Lo2Sft|RaiEnt|
                      `-------------'  `-------------'
    */
   [_BASE] = LAYOUT_2x1u_left(
     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,          KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
     SF_A,    CT_S,    GU_D,    AL_F,    KC_G,          KC_H,    AL_J,    GU_K,    CT_L,    SF_SC,
     KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,          KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,
-                               LOW_SPC, LO2_SFT,       KC_BSPC, RAI_ENT
+                               LOW_SPC, KC_BSPC,       LO2_SFT, RAI_ENT
   ),
 
   /* LOWER
@@ -94,14 +94,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 |------+------+------+------+------|  |------+------+------+------+------|
 |      |   `  |   [  |   ]  |      |  |      |   -  |   =  |   '  |   \  |
 `------+------+------+------+------|  |------+------+------+------+------'
-                     |LowSpc|Adjust|  |  BS  | Enter|
+                     |LowSpc|  BS  |  |Adjust| Enter|
                      `-------------'  `-------------'
    */
   [_LOWER] = LAYOUT_2x1u_left(
     KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,       KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,
     KC_ESC,  KC_TILD, KC_LCBR, KC_RCBR, XXXXXXX,       XXXXXXX, KC_UNDS, KC_PLUS, KC_DQT,  KC_PIPE,
     XXXXXXX, KC_GRV,  KC_LBRC, KC_RBRC, XXXXXXX,       XXXXXXX, KC_MINS, KC_EQL,  KC_QUOT, KC_BSLS,
-                               LOW_SPC, KC_ADJ,        _______, KC_ENT
+                               LOW_SPC, _______,       KC_ADJ,  KC_ENT
   ),
 
   /* LOWER2
@@ -112,14 +112,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 |------+------+------+------+------|  |------+------+------+------+------|
 |  F1  |  F2  |  F3  |  F4  |  F5  |  |  F11 |      |   ,  |   .  |   =  |
 `------+------+------+------+------|  |------+------+------+------+------'
-                     |Adjust|Lo2Sft|  |  BS  | Enter|
+                     |Adjust|  BS  |  |Lo2Sft| Enter|
                      `-------------'  `-------------'
    */
   [_LOWER2] = LAYOUT_2x1u_left(
     KC_1,    KC_2,    KC_3,    KC_4,    KC_5,          KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
-    KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,        KC_F12, KC_PLUS, KC_MINS, KC_ASTR, KC_SLSH,
-    KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,         KC_F11, XXXXXXX, KC_COMM, KC_DOT,  KC_EQL ,
-                              KC_ADJ,  LO2_SFT,       _______, KC_ENT
+    KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,        KC_F12,  KC_PLUS, KC_MINS, KC_ASTR, KC_SLSH,
+    KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,         KC_F11,  XXXXXXX, KC_COMM, KC_DOT,  KC_EQL ,
+                               KC_ADJ,  _______,       LO2_SFT, KC_ENT
   ),
 
   /* RAISE
@@ -130,14 +130,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 |------+------+------+------+------|  |------+------+------+------+------|
 |      |      |      |      |      |  |      |  BS  |SftTab| Tab  | Del  |
 `------+------+------+------+------|  |------+------+------+------+------'
-                     | Space|      |  |  BS  |RaiEnt|
+                     | Space|  BS  |  |      |RaiEnt|
                      `-------------'  `-------------'
    */
   [_RAISE] = LAYOUT_2x1u_left(
     CG_LEFT, CG_RGHT, SG_LEFT, SG_RGHT, XXXXXXX,       XXXXXXX, KC_HOME, KC_PGDN, KC_PGUP, KC_END,
     KC_LSFT, KC_LCTL, KC_LGUI, KC_LALT, XXXXXXX,       XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, KC_BSPC,S(KC_TAB),KC_TAB,  KC_DEL,
-                               KC_SPC,  XXXXXXX,       _______, RAI_ENT
+                               KC_SPC,  _______,       XXXXXXX, RAI_ENT
   ),
 
   /* ADJUST
@@ -148,7 +148,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 |------+------+------+------+------|  |------+------+------+------+------|
 |RGB ON| VAL- | SAT- | HUE- | MODE-|  |      |      |      |      |      |
 `------+------+------+------+------|  |------+------+------+------+------'
-                     |LowSpc|Lo2Sft|  |  BS  | Enter|
+                     |LowSpc|  BS  |  |Lo2Sft| Enter|
                      `-------------'  `-------------'
    */
   [_ADJUST] = LAYOUT_2x1u_left(
