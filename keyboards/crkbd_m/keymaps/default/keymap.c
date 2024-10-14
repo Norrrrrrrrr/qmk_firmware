@@ -18,7 +18,6 @@
 enum layer_names {
   _BASE = 0,
   _LOWER,
-  _LOWER2,
   _RAISE,
   _ADJUST
 };
@@ -40,7 +39,6 @@ enum layer_names {
 
 #define LOW_SPC LT(_LOWER, KC_SPC)
 #define RAI_ENT LT(_RAISE, KC_ENT)
-#define LO2_BS LT(_LOWER2, KC_BSPC)
 #define KC_ADJ MO(_ADJUST)
 
 /* Combo */
@@ -75,50 +73,32 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 |   Z  |   X  |   C  |   V  |   B  |                |   N  |   M  |   ,  |   .  |   /  |
 |    ^WH_U^^CLK_R^^CLK_L^ ^WH_D^   |                |    ^App^  ^ - ^    |      |      |
 `------+------+------+------+------+------.  ,------+------+------+------+------+------'
-                     |      |LowSpc| Shift|  | Lo2BS|RaiEnt|      |
+                     |      |LowSpc|  BS  |  | Shift|RaiEnt|      |
                      `--------------------'  `--------------------'
    */
   [_BASE] = LAYOUT_split_3x5_sqmtrx(
     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,          KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
     SF_A,    CT_S,    GU_D,    AL_F,    KC_G,          KC_H,    AL_J,    GU_K,    CT_L,    SF_SC,
     KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,          KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,
-                      XXXXXXX, LOW_SPC, KC_LSFT,       LO2_BS,  RAI_ENT, XXXXXXX
+                      XXXXXXX, LOW_SPC, KC_BSPC,       KC_LSFT, RAI_ENT, XXXXXXX
   ),
 
   /* LOWER
 ,----------------------------------.                ,----------------------------------.
-|   !  |   @  |   #  |   $  |   %  |                |   ^  |   &  |   *  |   (  |   )  |
+|   1  |   2  |   3  |   4  |   5  |                |   6  |   7  |   8  |   9  |   0  |
 |------+------+------+------+------|                |------+------+------+------+------|
-|  ESC |   ~  |   {  |   }  |      |                |      |   _  |   +  |   "  |   |  |
+|  ESC |   `  |   \  |   '  |  F11 |                |  F12 |   -  |   =  |   [  |   ]  |
 |------+------+------+------+------|                |------+------+------+------+------|
-|      |   `  |   [  |   ]  |      |                |      |   -  |   =  |   '  |   \  |
+|  F1  |  F2  |  F3  |  F4  |  F5  |                |  F6  |  F7  |  F8  |  F9  |  F10 |
 `------+------+------+------+------+------.  ,------+------+------+------+------+------'
-                     |      |LowSpc| Shift|  |Adjust| Enter|      |
+                     |      |LowSpc|  BS  |  | Shift|Adjust|      |
                      `--------------------'  `--------------------'
    */
   [_LOWER] = LAYOUT_split_3x5_sqmtrx(
-    KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,       KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,
-    KC_ESC,  KC_TILD, KC_LCBR, KC_RCBR, XXXXXXX,       XXXXXXX, KC_UNDS, KC_PLUS, KC_DQT,  KC_PIPE,
-    XXXXXXX, KC_GRV,  KC_LBRC, KC_RBRC, XXXXXXX,       XXXXXXX, KC_MINS, KC_EQL,  KC_QUOT, KC_BSLS,
-                      XXXXXXX, LOW_SPC, _______,       KC_ADJ,  KC_ENT,  XXXXXXX
-  ),
-
-  /* LOWER2
-,----------------------------------.                ,----------------------------------.
-|   1  |   2  |   3  |   4  |   5  |                |   6  |   7  |   8  |   9  |   0  |
-|------+------+------+------+------|                |------+------+------+------+------|
-|  F6  |  F7  |  F8  |  F9  |  F10 |                |  F12 |   +  |   -  |   *  |   /  |
-|------+------+------+------+------|                |------+------+------+------+------|
-|  F1  |  F2  |  F3  |  F4  |  F5  |                |  F11 |      |   ,  |   .  |   =  |
-`------+------+------+------+------+------.  ,------+------+------+------+------+------'
-                     |      |Adjust| Shift|  | Lo2BS| Enter|      |
-                     `--------------------'  `--------------------'
-   */
-  [_LOWER2] = LAYOUT_split_3x5_sqmtrx(
     KC_1,    KC_2,    KC_3,    KC_4,    KC_5,          KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
-    KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,        KC_F12,  KC_PLUS, KC_MINS, KC_ASTR, KC_SLSH,
-    KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,         KC_F11,  XXXXXXX, KC_COMM, KC_DOT,  KC_EQL ,
-                      XXXXXXX, KC_ADJ,  _______,       LO2_BS,  KC_ENT,  XXXXXXX
+    KC_ESC,  KC_GRV,  KC_BSLS, KC_QUOT, KC_F11,        KC_F12,  KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC,
+    KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,         KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,
+                      XXXXXXX, LOW_SPC, _______,       _______, KC_ADJ,  XXXXXXX
   ),
 
   /* RAISE
@@ -129,14 +109,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 |------+------+------+------+------|                |------+------+------+------+------|
 |      |      |      |      |      |                |      |  BS  |SftTab| Tab  | Del  |
 `------+------+------+------+------+------.  ,------+------+------+------+------+------'
-                     |      | Space| Shift|  |  BS  |RaiEnt|      |
+                     |      |Adjust|  BS  |  | Shift|RaiEnt|      |
                      `--------------------'  `--------------------'
    */
   [_RAISE] = LAYOUT_split_3x5_sqmtrx(
     CG_LEFT, CG_RGHT, SG_LEFT, SG_RGHT, XXXXXXX,       XXXXXXX, KC_HOME, KC_PGDN, KC_PGUP, KC_END,
     KC_LSFT, KC_LCTL, KC_LGUI, KC_LALT, XXXXXXX,       XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, KC_BSPC,S(KC_TAB),KC_TAB,  KC_DEL,
-                      XXXXXXX, KC_SPC,  _______,       KC_BSPC, RAI_ENT, XXXXXXX
+                      XXXXXXX, KC_ADJ,  _______,       _______, RAI_ENT, XXXXXXX
   ),
 
   /* ADJUST
@@ -147,14 +127,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 |------+------+------+------+------|                |------+------+------+------+------|
 |      |      |      |      |      |                |      |      |      |      |      |
 `------+------+------+------+------+------.  ,------+------+------+------+------+------'
-                     |      |LowSpc| Shift|  | Lo2BS| Enter|      |
+                     |      |LowSpc|  BS  |  | Shift|RaiEnt|      |
                      `--------------------'  `--------------------'
    */
   [_ADJUST] = LAYOUT_split_3x5_sqmtrx(
     QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, KC_PSCR, KC_INS,
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, KC_SCRL, KC_PAUS,
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                      XXXXXXX, _______, _______,       _______, KC_ENT,  XXXXXXX
+                      XXXXXXX, _______, _______,       _______, _______, XXXXXXX
   ),
 };
 
@@ -177,7 +157,6 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         return 400;
     /* Typing layer quickly */
     case LOW_SPC:
-    case LO2_BS:
     case RAI_ENT:
         return 130;
     default:
