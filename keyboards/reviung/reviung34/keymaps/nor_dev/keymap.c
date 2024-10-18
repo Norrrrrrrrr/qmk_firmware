@@ -110,14 +110,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 |------+------+------+------+------|  |------+------+------+------+------|
 |      |      |      |      |      |  |      |  BS  |SftTab| Tab  | Del  |
 `------+------+------+------+------|  |------+------+------+------+------'
-                     |Adjust|  BS  |  | Shift|RaiEnt|
+                     | Space|  BS  |  | Shift|RaiEnt|
                      `-------------'  `-------------'
    */
   [_RAISE] = LAYOUT_2x1u_left(
     CG_LEFT, CG_RGHT, SG_LEFT, SG_RGHT, XXXXXXX,       XXXXXXX, KC_HOME, KC_PGDN, KC_PGUP, KC_END,
     KC_LSFT, KC_LCTL, KC_LGUI, KC_LALT, XXXXXXX,       XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, KC_BSPC,S(KC_TAB),KC_TAB,  KC_DEL,
-                               KC_ADJ,  _______,       _______, RAI_ENT
+                               KC_SPC,  _______,       _______, RAI_ENT
   ),
 
   /* ADJUST
