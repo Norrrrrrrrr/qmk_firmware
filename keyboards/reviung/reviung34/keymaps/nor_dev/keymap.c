@@ -23,6 +23,11 @@ enum layer_names {
   _ADJUST
 };
 
+enum my_keycodes {
+  KC_PRSET = SAFE_RANGE,
+  KC_BRSET
+};
+
 #define SF_A SFT_T(KC_A)
 #define CT_S CTL_T(KC_S)
 #define GU_D GUI_T(KC_D)
@@ -51,6 +56,8 @@ const uint16_t PROGMEM xc_combo[] = {KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM cv_combo[] = {KC_C, KC_V, COMBO_END};
 const uint16_t PROGMEM zx_combo[] = {KC_Z, KC_X, COMBO_END};
 const uint16_t PROGMEM vb_combo[] = {KC_V, KC_B, COMBO_END};
+const uint16_t PROGMEM op_combo[] = {KC_O, KC_P, COMBO_END};
+const uint16_t PROGMEM lsc_combo[] = {CT_L, SF_SC, COMBO_END};
 
 combo_t key_combos[] = {
   COMBO(fg_combo, KC_LNG2),
@@ -61,15 +68,18 @@ combo_t key_combos[] = {
   COMBO(cv_combo, KC_BTN1),
   COMBO(zx_combo, KC_WH_U),
   COMBO(vb_combo, KC_WH_D),
+  COMBO(op_combo, KC_PRSET),
+  COMBO(lsc_combo, KC_BRSET),
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* BASE
 ,----------------------------------.  ,----------------------------------.
 |   Q  |   W  |   E  |   R  |   T  |  |   Y  |   U  |   I  |   O  |   P  |
+|      |      |      |      |      |  |      |      |      |    ^ () ^   |
 |------+------+------+------+------|  |------+------+------+------+------|
 | A Sft| S Ctl| D Win| F Alt|   G  |  |   H  | J Alt| K Win| L Ctl| ; Sft|
-|      |      |      |   ^ImeOff^  |  |   ^ImeOn^   |      |      |      |
+|      |      |      |   ^ImeOff^  |  |   ^ImeOn^   |      |    ^ [] ^   |
 |------+------+------+------+------|  |------+------+------+------+------|
 |   Z  |   X  |   C  |   V  |   B  |  |   N  |   M  |   ,  |   .  |   /  |
 |    ^WH_U^^CLK_R^^CLK_L^ ^WH_D^   |  |    ^App^  ^ - ^    |      |      |
@@ -164,3 +174,25 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
       return 150;
   }
 }
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+    case KC_PRSET:
+        if (record->event.pressed) {
+            // when keycode is pressed
+            SEND_STRING("()"SS_TAP(X_LEFT));
+        } else {
+            // when keycode is released
+        }
+        break;
+    case KC_BRSET:
+        if (record->event.pressed) {
+            // when keycode is pressed
+            SEND_STRING("[]"SS_TAP(X_LEFT));
+        } else {
+            // when keycode is released
+        }
+        break;
+    }
+    return true;
+};
