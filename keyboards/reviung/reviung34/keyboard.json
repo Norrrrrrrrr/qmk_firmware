@@ -45,6 +45,7 @@
         "LAYOUT_split_3x5_2": "LAYOUT_2x1u_left",
         "LAYOUT_reviung34": "LAYOUT_2x1u_left",
         "LAYOUT_reviung34_2u": "LAYOUT_1x2u_left",
+        "LAYOUT": "LAYOUT_2x1u_left"
     },
     "layouts": {
         "LAYOUT_2x1u_left": {
