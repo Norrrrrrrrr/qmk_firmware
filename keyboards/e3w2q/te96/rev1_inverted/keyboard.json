@@ -48,6 +48,9 @@
     "processor": "atmega32u4",
     "bootloader": "caterina",
     "debounce": 40,
+    "layout_aliases": {
+        "LAYOUT": "LAYOUT_nn36"
+    },
     "layouts": {
         "LAYOUT_nn36": {
             "layout": [
