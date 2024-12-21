@@ -58,6 +58,9 @@ const uint16_t PROGMEM zx_combo[] = {KC_Z, KC_X, COMBO_END};
 const uint16_t PROGMEM vb_combo[] = {KC_V, KC_B, COMBO_END};
 const uint16_t PROGMEM op_combo[] = {KC_O, KC_P, COMBO_END};
 const uint16_t PROGMEM lsc_combo[] = {CT_L, SF_SC, COMBO_END};
+const uint16_t PROGMEM mieq_combo[] = {KC_MINS, KC_EQL, COMBO_END};
+const uint16_t PROGMEM eqlb_combo[] = {KC_EQL, KC_LBRC, COMBO_END};
+const uint16_t PROGMEM lbrb_combo[] = {KC_LBRC, KC_RBRC, COMBO_END};
 
 combo_t key_combos[] = {
   COMBO(fg_combo, KC_LNG2),
@@ -70,6 +73,9 @@ combo_t key_combos[] = {
   COMBO(vb_combo, KC_WH_D),
   COMBO(op_combo, KC_PRSET),
   COMBO(lsc_combo, KC_BRSET),
+  COMBO(mieq_combo, KC_COMM),
+  COMBO(eqlb_combo, KC_DOT),
+  COMBO(lbrb_combo, KC_SLSH),
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -99,6 +105,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 |   1  |   2  |   3  |   4  |   5  |                |   6  |   7  |   8  |   9  |   0  |
 |------+------+------+------+------|                |------+------+------+------+------|
 |  ESC |   `  |   \  |   '  |  F11 |                |  F12 |   -  |   =  |   [  |   ]  |
+|      |      |      |      |      |                |      |    ^ , ^  ^ . ^  ^ / ^    |
 |------+------+------+------+------|                |------+------+------+------+------|
 |  F1  |  F2  |  F3  |  F4  |  F5  |                |  F6  |  F7  |  F8  |  F9  |  F10 |
 `---------------------------+------+------.  ,------+------+---------------------------'
