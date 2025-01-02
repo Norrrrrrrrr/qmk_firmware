@@ -47,8 +47,8 @@ enum my_keycodes {
 #define KC_ADJ MO(_ADJUST)
 
 /* Combo */
-const uint16_t PROGMEM fg_combo[] = {AL_F, KC_G, COMBO_END};
-const uint16_t PROGMEM hj_combo[] = {KC_H, AL_J, COMBO_END};
+const uint16_t PROGMEM df_combo[] = {GU_D, AL_F, COMBO_END};
+const uint16_t PROGMEM jk_combo[] = {AL_J, GU_K, COMBO_END};
 const uint16_t PROGMEM nm_combo[] = {KC_N, KC_M, COMBO_END};
 const uint16_t PROGMEM mcom_combo[] = {KC_M, KC_COMM, COMBO_END};
 const uint16_t PROGMEM xc_combo[] = {KC_X, KC_C, COMBO_END};
@@ -62,8 +62,8 @@ const uint16_t PROGMEM eqlb_combo[] = {KC_EQL, KC_LBRC, COMBO_END};
 const uint16_t PROGMEM lbrb_combo[] = {KC_LBRC, KC_RBRC, COMBO_END};
 
 combo_t key_combos[] = {
-  COMBO(fg_combo, KC_LNG2),
-  COMBO(hj_combo, KC_LNG1),
+  COMBO(df_combo, KC_LNG2),
+  COMBO(jk_combo, KC_LNG1),
   COMBO(nm_combo, KC_APP),
   COMBO(mcom_combo, KC_MINS),
   COMBO(xc_combo, KC_BTN2),
@@ -84,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 |      |      |      |      |      |                |      |      |      |    ^ () ^   |
 |------+------+------+------+------|                |------+------+------+------+------|
 | A Sft| S Ctl| D Win| F Alt|   G  |                |   H  | J Alt| K Win| L Ctl| ; Sft|
-|      |      |      |   ^ImeOff^  |                |   ^ImeOn^   |      |    ^ [] ^   |
+|      |      |   ^ImeOff^  |      |                |      |   ^ImeOn^   |    ^ [] ^   |
 |------+------+------+------+------|                |------+------+------+------+------|
 |   Z  |   X  |   C  |   V  |   B  |                |   N  |   M  |   ,  |   .  |   /  |
 |    ^WH_U^^CLK_R^^CLK_L^ ^WH_D^   |                |    ^App^  ^ - ^    |      |      |
