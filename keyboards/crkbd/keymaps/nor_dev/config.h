@@ -20,43 +20,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-//#define USE_MATRIX_I2C
+// #define DEBUG_MATRIX_SCAN_RATE  //Output Scan rate [scans/sec]
+                                // '22/06/01: 1500[scans/sec] at Normal debounce
+                                // '22/06/01: 1410[scans/sec] at eager_pk debounce
 
+// place overrides here
 /* Select hand configuration */
 #define EE_HANDS
 
-#define USE_SERIAL_PD2
-
-#undef TAPPING_TERM
-// #define TAPPING_TERM 200
-#define TAPPING_TERM 160
-#define TAPPING_TERM_PER_KEY
-#define PERMISSIVE_HOLD
-#define IGNORE_MOD_TAP_INTERRUPT
-#define TAPPING_FORCE_HOLD
-#define TAPPING_FORCE_HOLD_PER_KEY
-
-// 押しっぱなしの時の反応までのインターバル
-#undef  MOUSEKEY_INTERVAL
-#define MOUSEKEY_INTERVAL 16
-// カーソルの移動スピード
-#undef  MOUSEKEY_MAX_SPEED
-#define MOUSEKEY_MAX_SPEED 2
-// マウス操作がトップスピードになるまでの時間
-#undef  MOUSEKEY_TIME_TO_MAX
-#define MOUSEKEY_TIME_TO_MAX 30
-
-/* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
-#undef  DEBOUNCE
-#define DEBOUNCE 30 //For sym_eager_pk algorithm
-
-/* disable action features */
-#define LAYER_STATE_8BIT
-#define NO_ACTION_ONESHOT
-
-
+#define QUICK_TAP_TERM_PER_KEY
 
 // If you need more program area, try select and reduce rgblight modes to use.
+
+/* disable action features */
+//#define NO_ACTION_LAYER
+#define LAYER_STATE_8BIT
+//#define NO_ACTION_TAPPING
+#define NO_ACTION_ONESHOT
 
 // Selection of RGBLIGHT MODE to use.
 #if defined(LED_ANIMATIONS)
