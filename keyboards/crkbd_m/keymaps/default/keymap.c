@@ -177,7 +177,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     case RAI_ENT:
         return 130;
     default:
-      return 150;
+      return 200;
   }
 }
 

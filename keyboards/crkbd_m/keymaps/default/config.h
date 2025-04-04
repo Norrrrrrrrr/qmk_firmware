@@ -29,6 +29,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define EE_HANDS
 
 #define QUICK_TAP_TERM_PER_KEY
+#define CHORDAL_HOLD
 
 // If you need more program area, try select and reduce rgblight modes to use.
 
