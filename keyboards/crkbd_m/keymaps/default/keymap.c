@@ -179,11 +179,11 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     /* Avoid mis-type */
     case GU_D:
     case GU_K:
-        return 400;
+        return 200;
     /* Typing layer quickly */
     case LOW_SPC:
     case RAI_ENT:
-        return 130;
+        return 200;
     default:
       return 200;
   }
