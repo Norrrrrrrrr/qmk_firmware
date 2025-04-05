@@ -21,5 +21,6 @@
 #define EE_HANDS
 
 #define QUICK_TAP_TERM_PER_KEY
+#define CHORDAL_HOLD
 
 
