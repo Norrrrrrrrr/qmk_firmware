@@ -22,9 +22,6 @@
         "time_to_max": 30
     },
     "tapping": {
-        "chordal_hold": true,
-        "permissive_hold": true,
-        "term": 160,
         "term_per_key": true
     },
     "build": {

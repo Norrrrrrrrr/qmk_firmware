@@ -155,14 +155,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 };
 
-const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
-    LAYOUT(
-        'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R',
-        'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R',
-        'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R',
-                       '*', '*',  '*', '*'
-    );
-
 uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LOW_SPC:
@@ -176,16 +168,12 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-    /* Avoid mis-type */
-    case GU_D:
-    case GU_K:
-        return 200;
     /* Typing layer quickly */
     case LOW_SPC:
     case RAI_ENT:
-        return 200;
+        return 130;
     default:
-      return 200;
+      return TAPPING_TERM;
   }
 }
 
