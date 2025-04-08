@@ -23,7 +23,6 @@
 // place overrides here
 
 #define QUICK_TAP_TERM_PER_KEY
-#define CHORDAL_HOLD
 
 #define WS2812_DI_PIN D3
   #define RGBLIGHT_LED_COUNT 9
