@@ -1,11 +1,11 @@
-﻿# The nor_dev crkbd Layout
-# nor_dev
-# command: cd qmk_firmware, make crkbd:nor_dev(:flash)
-
-# command with EEP for handedness: make crkbd:nor_dev:avrdude-split-left( or avrdude-split-right )
-# command all 4 keyboards: make crkbd_m:default && make e3w2q/te96/rev1_inverted:nn36 && make nirvana_nn:default && make reviung/reviung34:nor_dev
-## 配列
-
+﻿# Crkbd nor_dev Layout
+## Command
+```
+make crkbd:nor_dev(:flash)
+make crkbd:nor_dev:avrdude-split-left( or avrdude-split-right )
+( all keyboards: make crkbd:nor_dev && make crkbd_m:default && make nirvana_nn:default )
+```
+## Layout
 ### Base
 ```
 ,----------------------------------.                ,----------------------------------.
