@@ -1,9 +1,11 @@
-﻿# The Default Nirvana Layout
-# default
-# command: cd qmk_firmware, make nirvana_nn:default(:flash)
-# command with EEP for handedness: make nirvana_nn:default:avrdude-split-left( or avrdude-split-right )
-## 配列
-
+﻿# Nirvana
+## Command
+```
+make nirvana_nn:default(:flash)
+make nirvana_nn:default:avrdude-split-left( or avrdude-split-right )
+( all keyboards: make crkbd:nor_dev && make crkbd_m:default && make nirvana_nn:default )
+```
+## Layout
 ### Base
 ```
 ,----------------------------------.                ,----------------------------------.
