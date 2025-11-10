@@ -138,7 +138,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /* ADJUST
 ,----------------------------------.                ,----------------------------------.
-| Reset|      |      |      |      |                |      |      |      |Print | Ins  |
+| Reset|      |      |      |      |                |      |      | Ins  |      |Print |
 +------+------+------+------+------|                |------+------+------+------+------|
 |      |      |      |      |      |                |      |      |      |ScLock|Pause |
 |------+------+------+------+------|                |------+------+------+------+------|
@@ -148,7 +148,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                             `-------------'  `-------------'
    */
   [_ADJUST] = LAYOUT(
-    QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, KC_PSCR, KC_INS,
+    QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, KC_INS,  XXXXXXX, KC_PSCR,
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, KC_SCRL, KC_PAUS,
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                                _______, _______,       _______, _______
