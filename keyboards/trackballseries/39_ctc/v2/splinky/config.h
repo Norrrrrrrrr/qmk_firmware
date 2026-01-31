@@ -16,8 +16,6 @@
  */
 
 #pragma once
-// s nori
-#define RP2040_FLASH_GD25Q64CS
 
 /* Handedness. */
 //#define MASTER_RIGHT
