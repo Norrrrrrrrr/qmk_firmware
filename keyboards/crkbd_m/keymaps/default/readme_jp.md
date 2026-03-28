@@ -1,7 +1,7 @@
 ﻿# Crkbd_m
 ## Command
 ```
-make crkbd_m:default(:flash)
+make crkbd_m:default(:flash) or qmk clean && qmk flash -kb crkbd_m -km default -j 0
 make crkbd_m:default:avrdude-split-left( or avrdude-split-right )
 ( all keyboards: make crkbd:nor_dev && make crkbd_m:default && make nirvana_nn:default )
 ```
