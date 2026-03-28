@@ -1,7 +1,7 @@
 ﻿# Nirvana
 ## Command
 ```
-make nirvana_nn:default(:flash)
+make nirvana_nn:default(:flash) or qmk clean && qmk flash -kb nirvana_nn -km default -j 0
 make nirvana_nn:default:avrdude-split-left( or avrdude-split-right )
 ( all keyboards: make crkbd:nor_dev && make crkbd_m:default && make nirvana_nn:default )
 ```
