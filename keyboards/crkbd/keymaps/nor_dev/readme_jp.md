@@ -1,7 +1,7 @@
 ﻿# Crkbd nor_dev Layout
 ## Command
 ```
-make crkbd:nor_dev(:flash)
+make crkbd:nor_dev(:flash) or qmk clean && qmk flash -kb crkbd -km nor_dev -j 0
 make crkbd:nor_dev:avrdude-split-left( or avrdude-split-right )
 ( all keyboards: make crkbd:nor_dev && make crkbd_m:default && make nirvana_nn:default )
 ```
