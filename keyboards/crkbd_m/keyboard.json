@@ -1,7 +1,7 @@
 {
     "keyboard_name": "crkbd_m",
     "manufacturer": "Norrrrrrrrr",
-    "url": "",
+    "url": "https://github.com/Norrrrrrrrr/qmk_firmware/tree/dev_nor2/keyboards/crkbd_m",
     "maintainer": "Norrrrrrrrr",
     "usb": {
         "vid": "0x4653",
