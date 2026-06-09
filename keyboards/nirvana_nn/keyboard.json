@@ -1,7 +1,7 @@
 {
     "keyboard_name": "nirvana_nn",
     "manufacturer": "Norrrrrrrrr",
-    "url": "",
+    "url": "https://github.com/Norrrrrrrrr/qmk_firmware/tree/dev_nor2/keyboards/nirvana_nn",
     "maintainer": "Norrrrrrrrr",
     "usb": {
         "vid": "0x1209",
