@@ -61,19 +61,19 @@ const key_override_t *key_overrides[] = {
     &ko_make_basic(MOD_MASK_SHIFT, KC_0, JP_RPRN), // )
     &ko_make_basic(MOD_MASK_SHIFT, SF_SC, JP_COLN), // :
     &ko_make_basic(MOD_MASK_SHIFT, KC_MINS, JP_UNDS), // _
+
     &ko_make_basic(MOD_MASK_SHIFT, KC_EQL, JP_PLUS), // +
     &ko_make_basic(0, KC_EQL, JP_EQL), // =
-
-    &ko_make_with_layers_and_negmods(0, KC_QUOT, JP_QUOT, ~0, (uint8_t) MOD_MASK_SHIFT), // '
     &ko_make_basic(MOD_MASK_SHIFT, KC_QUOT, JP_DQUO), // "
-    &ko_make_with_layers_and_negmods(0, KC_GRV, JP_GRV, ~0, (uint8_t) MOD_MASK_SHIFT), // `
+    &ko_make_basic(0, KC_QUOT, JP_QUOT), // '
     &ko_make_basic(MOD_MASK_SHIFT, KC_GRV, JP_TILD), // ~
-    &ko_make_with_layers_and_negmods(0, KC_BSLS, JP_BSLS, ~0, (uint8_t) MOD_MASK_SHIFT), // (backslash)
+    &ko_make_basic(0, KC_GRV, JP_GRV), // `
     &ko_make_basic(MOD_MASK_SHIFT, KC_BSLS, JP_PIPE), // |
-    &ko_make_with_layers_and_negmods(0, KC_LBRC, JP_LBRC, ~0, (uint8_t) MOD_MASK_SHIFT), // [
+    &ko_make_basic(0, KC_BSLS, JP_BSLS), // (backslash)
     &ko_make_basic(MOD_MASK_SHIFT, KC_LBRC, JP_LCBR), // {
-    &ko_make_with_layers_and_negmods(0, KC_RBRC, JP_RBRC, ~0, (uint8_t) MOD_MASK_SHIFT), // ]
+    &ko_make_basic(0, KC_LBRC, JP_LBRC), // [
     &ko_make_basic(MOD_MASK_SHIFT, KC_RBRC, JP_RCBR), // }
+    &ko_make_basic(0, KC_RBRC, JP_RBRC), // ]
 
     &ko_make_basic(0, KC_CAPS, JP_CAPS) // (CapsLock)
 
