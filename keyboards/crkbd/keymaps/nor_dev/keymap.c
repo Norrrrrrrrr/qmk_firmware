@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include QMK_KEYBOARD_H
+#include "keymap_japanese.h"
 
 enum layer_names {
   _BASE = 0,
@@ -48,6 +49,67 @@ enum my_keycodes {
 #define LOW_SPC LT(_LOWER, KC_SPC)
 #define RAI_ENT LT(_RAISE, KC_ENT)
 #define KC_ADJ MO(_ADJUST)
+
+/* Key Override for JP keyboard setting */
+// const key_override_t key_at_of_jp_kbd = ko_make_basic(MOD_MASK_SHIFT, KC_2, JP_AT); // @
+
+const key_override_t *key_overrides[] = {
+    &ko_make_basic(MOD_MASK_SHIFT, KC_2, JP_AT), // @
+    &ko_make_basic(MOD_MASK_SHIFT, S(KC_2), JP_AT), // @
+    &ko_make_basic(0, S(KC_2), JP_AT), // @
+
+    &ko_make_basic(MOD_MASK_SHIFT, KC_6, JP_CIRC), // ^
+    &ko_make_basic(MOD_MASK_SHIFT, S(KC_6), JP_CIRC), // ^
+    &ko_make_basic(0, S(KC_6), JP_CIRC), // ^
+
+    &ko_make_basic(MOD_MASK_SHIFT, KC_7, JP_AMPR), // &
+    &ko_make_basic(0, S(KC_7), JP_AMPR), // &
+
+    &ko_make_basic(MOD_MASK_SHIFT, KC_8, JP_ASTR), // *
+    &ko_make_basic(0, S(KC_8), JP_ASTR), // *
+
+    &ko_make_basic(MOD_MASK_SHIFT, KC_9, JP_LPRN), // (
+    &ko_make_basic(0, S(KC_9), JP_LPRN), // (
+
+    &ko_make_basic(MOD_MASK_SHIFT, KC_0, JP_RPRN), // )
+    &ko_make_basic(0, S(KC_0), JP_RPRN), // )
+
+    &ko_make_basic(MOD_MASK_SHIFT, KC_SCLN, JP_COLN), // :
+    &ko_make_basic(MOD_MASK_SHIFT, SF_SC, JP_COLN), // :
+
+    // LT(1,KC_EQL) is handled in process_record_user
+
+    &ko_make_basic(MOD_MASK_SHIFT, KC_MINS, JP_UNDS), // _
+    // we can apply overrides but loose RCTL_T() effect
+    // &ko_make_basic(MOD_MASK_SHIFT, RCTL_T(KC_MINS), JP_UNDS), // _
+
+    &ko_make_basic(MOD_MASK_SHIFT, KC_EQL, JP_PLUS), // =
+    &ko_make_basic(0, KC_EQL, JP_EQL), // +
+
+
+    &ko_make_with_layers_and_negmods(0, KC_QUOT, JP_QUOT, ~0, (uint8_t) MOD_MASK_SHIFT), // '
+    &ko_make_basic(MOD_MASK_SHIFT, KC_QUOT, JP_DQUO), // "
+    &ko_make_basic(0, S(KC_QUOT), JP_DQUO), // "
+
+    &ko_make_with_layers_and_negmods(0, KC_GRV, JP_GRV, ~0, (uint8_t) MOD_MASK_SHIFT), // `
+    &ko_make_basic(MOD_MASK_SHIFT, KC_GRV, JP_TILD), // ~
+    &ko_make_basic(0, S(KC_GRV), JP_TILD), // ~
+
+    &ko_make_with_layers_and_negmods(0, KC_BSLS, JP_BSLS, ~0, (uint8_t) MOD_MASK_SHIFT), // (backslash)
+    &ko_make_basic(MOD_MASK_SHIFT, KC_BSLS, JP_PIPE), // |
+    &ko_make_basic(0, S(KC_BSLS), JP_PIPE), // |
+
+    &ko_make_with_layers_and_negmods(0, KC_LBRC, JP_LBRC, ~0, (uint8_t) MOD_MASK_SHIFT), // [
+    &ko_make_basic(MOD_MASK_SHIFT, KC_LBRC, JP_LCBR), // {
+    &ko_make_basic(0, S(KC_LBRC), JP_LCBR), // {
+
+    &ko_make_with_layers_and_negmods(0, KC_RBRC, JP_RBRC, ~0, (uint8_t) MOD_MASK_SHIFT), // ]
+    &ko_make_basic(MOD_MASK_SHIFT, KC_RBRC, JP_RCBR), // }
+    &ko_make_basic(0, S(KC_RBRC), JP_RCBR), // }
+
+    &ko_make_basic(0, KC_CAPS, JP_CAPS) // (CapsLock)
+
+};
 
 /* Combo */
 const uint16_t PROGMEM df_combo[] = {GU_D, AL_F, COMBO_END};
