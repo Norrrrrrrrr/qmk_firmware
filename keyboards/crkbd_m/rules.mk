@@ -3,6 +3,7 @@
 #
 
 COMBO_ENABLE = yes			# Enable Combo
+KEY_OVERRIDE_ENABLE = yes	# Enable Key Override
 
 # Reduce code size
 SPACE_CADET_ENABLE = no
