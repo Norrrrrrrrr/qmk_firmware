@@ -65,8 +65,7 @@ const key_override_t *key_overrides[] = {
     &ko_make_basic(0, KC_QUOT, JP_QUOT), // '
     &ko_make_basic(MOD_MASK_SHIFT, KC_GRV, JP_TILD), // ~
     &ko_make_basic(0, KC_GRV, JP_GRV), // `
-    &ko_make_basic(MOD_MASK_SHIFT, KC_BSLS, JP_PIPE), // |
-    &ko_make_basic(0, KC_BSLS, JP_BSLS), // (backslash)
+    &ko_make_basic(0, KC_BSLS, JP_YEN), // (backslash), |( Shift + KC_BSLS = Shift + JP_YEN )
     &ko_make_basic(0, KC_LBRC, JP_LBRC), // [, {( Shift + KC_LBRC = Shift + JP_LBRC )
     &ko_make_basic(0, KC_RBRC, JP_RBRC), // ], }( Shift + KC_RBRC = Shift + JP_RBRC )
 };
