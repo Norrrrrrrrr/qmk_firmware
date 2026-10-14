@@ -194,38 +194,37 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
 }
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
-  switch (keycode) {
-    /* Typing layer quickly */
-    case LOW_SPC:
-    case RAI_ENT:
-        return 130;
-    default:
-      return TAPPING_TERM;
-  }
+    switch (keycode) {
+        /* Typing layer quickly */
+        case LOW_SPC:
+        case RAI_ENT:
+            return 130;
+        default:
+            return TAPPING_TERM;
+    }
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-    case KC_PRSET:
-        if (record->event.pressed) {
-            // when keycode is pressed
-            SEND_STRING("()"SS_TAP(X_LEFT));
-        } else {
-            // when keycode is released
-        }
-        break;
-    case KC_BRSET:
-        if (record->event.pressed) {
-            // when keycode is pressed
-            SEND_STRING("[]"SS_TAP(X_LEFT));
-        } else {
-            // when keycode is released
-        }
-        break;
+        case KC_PRSET:
+            if (record->event.pressed) {
+                // when keycode is pressed
+                SEND_STRING("()" SS_TAP(X_LEFT));
+            } else {
+                // when keycode is released
+            }
+            break;
+        case KC_BRSET:
+            if (record->event.pressed) {
+                // when keycode is pressed
+                SEND_STRING("[]" SS_TAP(X_LEFT));
+            } else {
+                // when keycode is released
+            }
+            break;
     }
     return true;
-};
-
+}
 
 bool is_flow_tap_key(uint16_t keycode) {
     if ((get_mods() & (MOD_MASK_CG | MOD_BIT_LALT)) != 0) {
