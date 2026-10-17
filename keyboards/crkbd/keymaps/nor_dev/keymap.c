@@ -187,7 +187,6 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
         case LOW_SPC:
         case RAI_ENT:
             return 0;
-            break;
         default:
             return QUICK_TAP_TERM;
     }
@@ -217,7 +216,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case KC_BRSET:
             if (record->event.pressed) {
                 // when keycode is pressed
-                SEND_STRING("[]" SS_TAP(X_LEFT));
+                SEND_STRING("[]" SS_UP(X_LSFT) SS_TAP(X_LEFT));
             } else {
                 // when keycode is released
             }
