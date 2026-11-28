@@ -22,9 +22,10 @@
         "time_to_max": 30
     },
     "tapping": {
-        "term_per_key": true,
+        "flow_tap_term": 120,
         "permissive_hold": true,
-        "term": 300
+        "term": 300,
+        "term_per_key": true
     },
     "build": {
         "debounce_type": "sym_eager_pk",
